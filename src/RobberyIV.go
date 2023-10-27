@@ -9,7 +9,8 @@ func main() {
 
 /*
 沿街有一排连续的房屋。每间房屋内都藏有一定的现金。现在有一位小偷计划从这些房屋中窃取现金。
-
+git config --global http.https://github.com.proxy https://127.0.0.1:10809
+git config --global https.https://github.com.proxy https://127.0.0.1:10809
 由于相邻的房屋装有相互连通的防盗系统，所以小偷 不会窃取相邻的房屋 。
 
 小偷的 窃取能力 定义为他在窃取过程中能从单间房屋中窃取的 最大金额 。
