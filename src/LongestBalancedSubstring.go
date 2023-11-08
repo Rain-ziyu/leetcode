@@ -37,3 +37,27 @@ func findTheLongestBalancedSubstring(s string) int {
 	}
 	return res
 }
+
+// @Method: findTheLongestBalancedSubstring
+// @Description: 最长平衡子字符串 优化不使用
+// @param s
+// @return int
+func findTheLongestBalancedSubstringFast(s string) int {
+	res := 0
+	length := len(s)
+
+	for index := 0; index < length; {
+		lingbiaoshi := 0
+		yibiaoshi := 0
+		for s[index] == '0' && index < length {
+			lingbiaoshi++
+			index++
+		}
+		for s[index] == '1' && index < length {
+			yibiaoshi++
+			index++
+		}
+		res = 2 * min(lingbiaoshi, yibiaoshi)
+	}
+	return res
+}
