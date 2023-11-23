@@ -70,7 +70,7 @@ import (
 )
 
 func main() {
-	entityParser("&amp; is an HTML entity but &amp;ambassador; is not.")
+	kmp("BBC ABCDAB ABCDABDABDE", "ABCDABD", "a")
 }
 
 // leetcode submit region begin(Prohibit modification and deletion)
@@ -129,11 +129,11 @@ func kmp(text string, tartget string, replace string) string {
 				target = 0
 			}
 		} else {
-			if next[target] == 0 {
-				target = 0
-			} else {
-				target = target - next[i]
+			if target != 0 {
+				i--
+				target = next[target-1]
 			}
+
 		}
 	}
 	return tartget
