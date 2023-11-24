@@ -36,6 +36,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2824-统计和小于目标的下标对数目.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2824-统计和小于目标的下标对数目.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2824" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2824-统计和小于目标的下标对数目.go" />
+              <option name="titleSlug" value="count-pairs-whose-sum-is-less-than-target" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[2760]最长奇偶子数组.go">
           <value>
             <LeetcodeEditor>
