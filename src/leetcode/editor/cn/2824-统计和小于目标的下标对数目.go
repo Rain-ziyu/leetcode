@@ -64,5 +64,18 @@ func countPairs(nums []int, target int) int {
 	}
 	return res
 }
+func binarySearch(nums []int, target int, start int, end int) int {
+	res := end + 1
+	for start <= end {
+		mid := (end + start) / 2
+		if nums[mid] >= target {
+			res = mid
+			end = mid - 1
+		} else {
+			start = mid + 1
+		}
+	}
+	return res
+}
 
 //leetcode submit region end(Prohibit modification and deletion)
