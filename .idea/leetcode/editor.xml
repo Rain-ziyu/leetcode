@@ -3,7 +3,62 @@
   <component name="LeetcodeEditor">
     <option name="projectConfig">
       <map>
-        <entry key="/var/folders/6n/d8c6hksn2bn1kpjm4ldx4nf00000gp/T/leetcode/editor/cn/[2760]最长奇偶子数组.go">
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1410-HTML 实体解析器.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/1410-HTML 实体解析器.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1410" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1410-HTML 实体解析器.go" />
+              <option name="titleSlug" value="html-entity-parser" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2216-美化数组的最少删除数.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2216-美化数组的最少删除数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2216" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2216-美化数组的最少删除数.go" />
+              <option name="titleSlug" value="minimum-deletions-to-make-array-beautiful" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2304-网格中的最小路径代价.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2304-网格中的最小路径代价.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2304" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2304-网格中的最小路径代价.go" />
+              <option name="titleSlug" value="minimum-path-cost-in-a-grid" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2824-统计和小于目标的下标对数目.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2824-统计和小于目标的下标对数目.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2824" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2824-统计和小于目标的下标对数目.go" />
+              <option name="titleSlug" value="count-pairs-whose-sum-is-less-than-target" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/907-子数组的最小值之和.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/907-子数组的最小值之和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn907" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/907-子数组的最小值之和.go" />
+              <option name="titleSlug" value="sum-of-subarray-minimums" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[2760]最长奇偶子数组.go">
           <value>
             <LeetcodeEditor>
               <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[2760]最长奇偶子数组.md" />
