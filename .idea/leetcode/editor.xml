@@ -69,6 +69,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[1657]确定两个字符串是否接近.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[1657]确定两个字符串是否接近.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1657" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[1657]确定两个字符串是否接近.go" />
+              <option name="titleSlug" value="determine-if-two-strings-are-close" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[1670]设计前中后队列.go">
           <value>
             <LeetcodeEditor>
