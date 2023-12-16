@@ -68,6 +68,7 @@
 
 // leetcode submit region begin(Prohibit modification and deletion)
 package main
+
 func minimumFuelCost(roads [][]int, seats int) (ans int64) {
 	g := make([][]int, len(roads)+1)
 	for _, e := range roads {

@@ -1,0 +1,551 @@
+#### 方法一：单调栈 + 优先队列
+
+**思路与算法**
+
+我们可以考虑将原始问题简化为计算数组中每个数字的**下一个**比它大的数字。为了解决这一问题，我们可以利用「单调栈」算法。该算法的核心思想是利用一个栈来存储数组元素的下标。在遍历数组时，对于每个元素，执行以下操作：如果当前元素大于栈顶元素对应的值，说明找到了栈顶元素的下一个更大的数字，将栈顶元素出栈，并更新结果数组。如果当前元素小于等于栈顶元素对应的值，将当前元素的下标压入栈中，保持栈的**单调递减**性质。这样，最终结果数组中存储的就是每个数字的下一个比它大的数字（如果存在的话），如果没有更大的数字，则对应位置的值为 $-1$。
+
+基于上述简化问题，我们考虑原始问题——找到每一个元素后的「第二大」整数。在处理上述简化问题的过程中，我们引入一个「最小堆」 $q$ 来存储已经找到它**下一个**比它大的数字的数组元素，并称「单调栈」为 $\textit{st}$。在遍历数组的过程中，对于每个元素，执行以下操作：
+
+1. 若该 $q$ 非空且堆顶元素小于当前遍历的元素时，说明当前元素为堆顶元素的「第二大」的整数，我们取出堆顶元素，并更新结果数组。重复该操作直至 $q$ 为空或者堆顶元素大于等于当前遍历元素。
+2. 若 $\textit{st}$ 非空且栈顶元素对应的值小于当前遍历元素，则说明找到了栈顶元素的下一个更大的数字，将栈顶元素出栈，并加入堆 $q$ 中。重复执行该操作直至 $\textit{st}$ 为空或者栈顶元素大于等于当前遍历元素。
+3. 将当前元素的下标压入栈 $\textit{st}$ 中。
+
+这样，最终结果数组中存储的就是每个数字的「第二大」数字（如果存在的话），如果没有「第二大」数字，则对应位置的值为 $-1$。
+
+**代码**
+
+* [sol1-C++]
+
+```C++
+class Solution {
+public:
+    vector<int> secondGreaterElement(vector<int>& nums) {
+        vector<int> res(nums.size(), -1);
+        stack<int> st;
+        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> q;
+        for (int i = 0; i < nums.size(); ++i) {
+            while (!q.empty() && q.top().first < nums[i]) {
+                res[q.top().second] = nums[i];
+                q.pop();
+            }
+            while (!st.empty() && nums[st.top()] < nums[i]) {
+                q.push({nums[st.top()], st.top()});
+                st.pop();
+            }
+            st.push(i);
+        }
+        return res;
+    }
+};
+```
+
+* [sol1-Java]
+
+```Java
+class Solution {
+    public int[] secondGreaterElement(int[] nums) {
+        int[] res = new int[nums.length];
+        Arrays.fill(res, -1);
+        Deque<Integer> stack = new ArrayDeque<Integer>();
+        PriorityQueue<int[]> pq = new PriorityQueue<int[]>((a, b) -> a[0] - b[0]);
+        for (int i = 0; i < nums.length; ++i) {
+            while (!pq.isEmpty() && pq.peek()[0] < nums[i]) {
+                res[pq.poll()[1]] = nums[i];
+            }
+            while (!stack.isEmpty() && nums[stack.peek()] < nums[i]) {
+                pq.offer(new int[]{nums[stack.peek()], stack.peek()});
+                stack.pop();
+            }
+            stack.push(i);
+        }
+        return res;
+    }
+}
+```
+
+* [sol1-C#]
+
+```C#
+public class Solution {
+    public int[] SecondGreaterElement(int[] nums) {
+        int[] res = new int[nums.Length];
+        Array.Fill(res, -1);
+        Stack<int> stack = new Stack<int>();
+        PriorityQueue<int[], int> pq = new PriorityQueue<int[], int>();
+        for (int i = 0; i < nums.Length; ++i) {
+            while (pq.Count > 0 && pq.Peek()[0] < nums[i]) {
+                res[pq.Dequeue()[1]] = nums[i];
+            }
+            while (stack.Count > 0 && nums[stack.Peek()] < nums[i]) {
+                pq.Enqueue(new int[]{nums[stack.Peek()], stack.Peek()}, nums[stack.Peek()]);
+                stack.Pop();
+            }
+            stack.Push(i);
+        }
+        return res;
+    }
+}
+```
+
+* [sol1-Python3]
+
+```Python
+class Solution:
+    def secondGreaterElement(self, nums: List[int]) -> List[int]:
+        res = [-1] * len(nums)
+        stack = []
+        q = []
+        
+        for i in range(len(nums)):
+            while len(q) and q[0][0] < nums[i]:
+                res[q[0][1]] = nums[i]
+                heappop(q)
+            while len(stack) and nums[stack[-1]] < nums[i]:
+                heappush(q, (nums[stack[-1]], stack[-1]))
+                stack.pop()
+            stack.append(i)
+
+        return res
+```
+
+* [sol1-C]
+
+```C
+typedef struct {
+    int first;
+    int second;
+} Node;
+
+typedef bool (*cmp)(const void *, const void *);
+
+typedef struct {
+    Node *arr;
+    int capacity;
+    int queueSize;
+    cmp compare;
+} PriorityQueue;
+
+Node *createNode(int x, int y) {
+    Node *obj = (Node *)malloc(sizeof(Node));
+    obj->first = x;
+    obj->second = y;
+    return obj;
+}
+
+PriorityQueue *createPriorityQueue(int size, cmp compare) {
+    PriorityQueue *obj = (PriorityQueue *)malloc(sizeof(PriorityQueue));
+    obj->arr = (Node *)malloc(sizeof(Node) * size);
+    obj->queueSize = 0;
+    obj->capacity = size;
+    obj->compare = compare;
+    return obj;
+}
+
+static bool compare(const void *a, const void *b) {
+    Node *p1 = (Node *)a;
+    Node *p2 = (Node *)b;
+    if (p1->first == p2->first) {
+        return p1->second < p2->second;
+    }
+    return p1->first > p2->first;
+}
+
+static void swap(Node *arr, int i, int j) {
+    Node tmp;
+    memcpy(&tmp, &arr[i], sizeof(Node));
+    memcpy(&arr[i], &arr[j], sizeof(Node));
+    memcpy(&arr[j], &tmp, sizeof(Node));
+}
+
+static void down(Node *arr, int size, int i, cmp compare) {
+    for (int k = 2 * i + 1; k < size; k = 2 * k + 1) {
+        // 父节点 (k - 1) / 2，左子节点 k，右子节点 k + 1
+        if (k + 1 < size && compare(&arr[k], &arr[k + 1])) {
+            k++;
+        }
+        if (compare(&arr[k], &arr[(k - 1) / 2])) {
+            break;
+        }
+        swap(arr, k, (k - 1) / 2);
+    }
+}
+
+void heapfiyQueue(PriorityQueue *obj) {
+    for (int i = obj->queueSize / 2 - 1; i >= 0; i--) {
+        down(obj->arr, obj->queueSize, i, obj->compare);
+    }
+}
+
+void pushQueue(PriorityQueue *obj, Node *node) {
+    memcpy(&obj->arr[obj->queueSize], node, sizeof(Node));
+    for (int i = obj->queueSize; i > 0 && obj->compare(&obj->arr[(i - 1) / 2], &obj->arr[i]); i = (i - 1) / 2) {
+        swap(obj->arr, i, (i - 1) / 2);
+    }
+    obj->queueSize++;
+}
+
+bool popQueue(PriorityQueue *obj) {
+    assert(obj->queueSize != 0);
+    swap(obj->arr, 0, obj->queueSize - 1);
+    down(obj->arr, obj->queueSize - 1, 0, obj->compare);
+    obj->queueSize--;
+    return true;
+}
+
+bool isFull(PriorityQueue *obj) {
+    return obj->queueSize == obj->capacity;
+}
+
+bool isEmpty(PriorityQueue *obj) {
+    return obj->queueSize == 0;
+}
+
+Node* topQueue(PriorityQueue *obj) {
+    assert(obj->queueSize != 0);
+    if (obj->queueSize == 0) {
+        return NULL;
+    } else {
+        return &obj->arr[0];
+    }
+}
+
+void freeQueue(PriorityQueue *obj) {
+    free(obj->arr);
+    free(obj);
+}
+
+int* secondGreaterElement(int* nums, int numsSize, int* returnSize) {
+    int *res = (int *)malloc(sizeof(int) * numsSize);
+    memset(res, 0xff, sizeof(int) * numsSize);
+    int stack[numsSize];
+    int top = 0;
+    PriorityQueue *q = createPriorityQueue(numsSize, compare);
+    for (int i = 0; i < numsSize; ++i) {
+        while (!isEmpty(q) && topQueue(q)->first < nums[i]) {
+            res[topQueue(q)->second] = nums[i];
+            popQueue(q);
+        }
+        while (top > 0 && nums[stack[top - 1]] < nums[i]) {
+            Node node;
+            node.first = nums[stack[top - 1]];
+            node.second = stack[top - 1];
+            pushQueue(q, &node);
+            top--;
+        }
+        stack[top++] = i;
+    }
+    *returnSize = numsSize;
+    freeQueue(q);
+    return res;
+}
+```
+
+* [sol1-Go]
+
+```Go
+type Pair struct { 
+    first int
+    second int 
+}
+
+type hp []Pair
+
+func (h hp) Len() int { 
+    return len(h)
+}
+
+func (h hp) Less(i, j int) bool { 
+    a, b := h[i], h[j]
+    return a.first < b.first || a.first == b.first && a.second < b.second 
+}
+
+func (h hp) Swap(i, j int) { 
+    h[i], h[j] = h[j], h[i] 
+}
+
+func (h *hp) Push(v interface{}) { 
+    *h = append(*h, v.(Pair)) 
+}
+
+func (h *hp) Pop() interface{} { 
+    a := *h
+    v := a[len(a) - 1] 
+    *h = a[:len(a)-1]
+    return v 
+}
+
+func secondGreaterElement(nums []int) []int {
+    res := make([]int, len(nums))
+    for i := 0; i < len(nums); i++ {
+        res[i] = -1
+    }
+    st := []int{}
+    q := hp{}
+    for i := 0; i < len(nums); i++ {
+        for len(q) > 0 && q[0].first < nums[i] {
+            res[q[0].second] = nums[i]
+            heap.Pop(&q)
+        }
+        for len(st) > 0 && nums[st[len(st) - 1]] < nums[i] {
+            heap.Push(&q, Pair{nums[st[len(st) - 1]], st[len(st) - 1]})
+            st = st[:len(st) - 1]
+        }
+        st = append(st, i)
+    }
+    return res
+}
+```
+
+* [sol1-JavaScript]
+
+```JavaScript
+var secondGreaterElement = function(nums) {
+    const n = nums.length;
+    const res = new Array(n).fill(-1);
+    const stack = [];
+    const q = new MinPriorityQueue();
+    
+    for (let i = 0; i < n; i++) {
+        while (!q.isEmpty() && q.front().element[0] < nums[i]) {
+            res[q.front().element[1]] = nums[i];
+            q.dequeue();
+        }
+        while (stack.length > 0 && nums[stack[stack.length - 1]] < nums[i]) {
+            let x = stack[stack.length - 1]
+            q.enqueue([nums[x], x], nums[x]);
+            stack.pop();
+        }
+        stack.push(i);
+    }
+    return res;
+};
+```
+
+**复杂度分析**
+
+- 时间复杂度：$O(n \times \log n)$，其中 $n$ 为数组 $\textit{nums}$ 的大小。最多每一个元素出入「优先队列」一次。
+- 空间复杂度：$O(n)$，其中 $n$ 为数组 $\textit{nums}$ 的大小。主要为「单调栈」和「优先队列」的空间开销。
+
+#### 方法二：双单调栈
+
+**思路与算法**
+
+在「方法一」中，我们观察到在执行操作 $1$ 后，如果最小堆非空，则堆顶元素一定大于等于当前遍历元素。同时，在操作 $2$ 中，从单调栈中弹出的元素一定满足小于当前遍历元素的条件。因此，从单调栈中弹出的元素一定小于堆顶元素（如果堆非空）。基于这一观察，我们可以进一步优化「方法一」的时间复杂度，用另一个「单调递减栈」 $\textit{st}_2$ 代替「最小堆」。
+
+我们定义一个新的单调递减栈 $\textit{st}_2$ 来保存原堆中的元素，并将「方法一」中的「单调栈」称为 $\textit{st}_1$。按照初始在栈 $\textit{st}_1$ 中的顺序，将原操作 $2$ 中弹出的元素加入 $\textit{st}_2$ 中。在上述分析的基础上，我们可以得知这样的操作后仍然能够保持 $\textit{st}_2$ 的单调递减性质。因此，在遍历数组的过程中，对于每个元素，执行以下操作：
+
+1. 若该 $\textit{st}_2$ 非空且栈顶元素小于当前遍历的元素时，说明当前元素为栈顶元素的「第二大」的整数，将栈顶元素出栈，并更新结果数组。重复该操作直至 $\textit{st}_2$ 为空或者栈顶元素大于等于当前遍历元素。
+2. 若 $\textit{st}_1$ 非空且栈顶元素对应的值小于当前遍历元素，则说明找到了栈顶元素的下一个更大的数字，将栈顶元素出栈。重复执行该操作直至 $\textit{st}_1$ 为空或者栈顶元素大于等于当前遍历元素。然后我们将出栈的元素按照在栈 $\textit{st}_1$ 中的顺序加入栈 $\textit{st}_2$ 中。
+3. 将当前元素的下标压入栈 $\textit{st}_1$ 中。
+
+这样，最终结果数组中存储的就是每个数字的「第二大」数字（如果存在的话），如果没有「第二大」数字，则对应位置的值为 $-1$。在实现操作 $2$ 的代码时，为了方便，我们使用「数组」来模拟「单调栈」。
+
+**代码**
+
+* [sol2-C++]
+
+```C++
+class Solution {
+public:
+    vector<int> secondGreaterElement(vector<int> &nums) {
+        int n = nums.size();
+        vector<int> res(n, -1);
+        vector<int> st1;
+        vector<int> st2;
+        for (int i = 0; i < n; ++i) {
+            int v = nums[i];
+            while (!st2.empty() && nums[st2.back()] < v) {
+                res[st2.back()] = v;
+                st2.pop_back();
+            }
+            int pos = st1.size() - 1;
+            while (pos >= 0 && nums[st1[pos]] < v) {
+                --pos;
+            }
+            st2.insert(st2.end(), st1.begin() + (pos + 1), st1.end());
+            st1.resize(pos + 1);
+            st1.push_back(i);
+        }
+        return res;
+    }
+};
+```
+
+* [sol2-Java]
+
+```Java
+class Solution {
+    public int[] secondGreaterElement(int[] nums) {
+        int n = nums.length;
+        int[] res = new int[n];
+        Arrays.fill(res, -1);
+        List<Integer> stack1 = new ArrayList<Integer>();
+        List<Integer> stack2 = new ArrayList<Integer>();
+        for (int i = 0; i < n; ++i) {
+            int v = nums[i];
+            while (!stack2.isEmpty() && nums[stack2.get(stack2.size() - 1)] < v) {
+                res[stack2.get(stack2.size() - 1)] = v;
+                stack2.remove(stack2.size() - 1);
+            }
+            int pos = stack1.size() - 1;
+            while (pos >= 0 && nums[stack1.get(pos)] < v) {
+                --pos;
+            }
+            for (int j = pos + 1; j < stack1.size(); j++) {
+                stack2.add(stack1.get(j));
+            }
+            for (int j = stack1.size() - 1; j >= pos + 1; j--) {
+                stack1.remove(j);
+            }
+            stack1.add(i);
+        }
+        return res;
+    }
+}
+```
+
+* [sol2-C#]
+
+```C#
+public class Solution {
+    public int[] SecondGreaterElement(int[] nums) {
+        int n = nums.Length;
+        int[] res = new int[n];
+        Array.Fill(res, -1);
+        IList<int> stack1 = new List<int>();
+        IList<int> stack2 = new List<int>();
+        for (int i = 0; i < n; ++i) {
+            int v = nums[i];
+            while (stack2.Count > 0 && nums[stack2[stack2.Count - 1]] < v) {
+                res[stack2[stack2.Count - 1]] = v;
+                stack2.RemoveAt(stack2.Count - 1);
+            }
+            int pos = stack1.Count - 1;
+            while (pos >= 0 && nums[stack1[pos]] < v) {
+                --pos;
+            }
+            for (int j = pos + 1; j < stack1.Count; j++) {
+                stack2.Add(stack1[j]);
+            }
+            for (int j = stack1.Count - 1; j >= pos + 1; j--) {
+                stack1.RemoveAt(j);
+            }
+            stack1.Add(i);
+        }
+        return res;
+    }
+}
+```
+
+* [sol2-Python3]
+
+```Python
+class Solution:
+    def secondGreaterElement(self, nums: List[int]) -> List[int]:
+        n = len(nums)
+        res = [-1] * n
+        st1, st2 = [], []
+        
+        for i in range(n):
+            v = nums[i]
+            while len(st2) and nums[st2[-1]] < v:
+                res[st2[-1]] = v
+                st2.pop()
+            pos = len(st1) - 1
+            while pos >= 0 and nums[st1[pos]] < v:
+                pos -=1
+            st2 += st1[pos + 1:]
+            del st1[pos + 1:]
+            st1.append(i)
+        return res
+```
+
+* [sol2-C]
+
+```C
+int* secondGreaterElement(int* nums, int numsSize, int* returnSize) {
+    int n = numsSize;
+    int st1[n], st2[n];
+    int st1Size = 0, st2Size = 0;
+    int *res = (int *)malloc(sizeof(int) * n);
+    memset(res, 0xff, sizeof(int) * n);
+
+    for (int i = 0; i < n; i++) {
+        int v = nums[i];
+        while (st2Size > 0 && nums[st2[st2Size - 1]] < v) {
+            res[st2[st2Size - 1]] = v;
+            st2Size--;
+        }
+        int pos = st1Size - 1;
+        while (pos >= 0 && nums[st1[pos]] < v) {
+            pos--;
+        }
+        memcpy(st2 + st2Size, st1 + pos + 1, sizeof(int) * (st1Size - pos - 1));
+        st2Size += st1Size - pos - 1;
+        st1Size = pos + 1;
+        st1[st1Size++] = i;
+    }        
+    *returnSize = n;
+    return res;
+}
+```
+
+* [sol2-Go]
+
+```Go
+func secondGreaterElement(nums []int) []int {
+    n := len(nums)
+    res := make([]int, n)
+    for i := 0; i < n; i++ {
+        res[i] = -1
+    }
+    st1, st2 := []int{}, []int{}
+
+    for i := 0; i < n; i++ {
+        v := nums[i]
+        for len(st2) > 0 && nums[st2[len(st2) - 1]] < v {
+            res[st2[len(st2) - 1]] = v
+            st2 = st2[: len(st2) - 1]
+        }
+        pos := len(st1) - 1
+        for pos >= 0 && nums[st1[pos]] < v {
+            pos--
+        }
+        st2 = append(st2, st1[pos + 1:]...)
+        st1 = append(st1[: pos + 1], i)
+    }   
+    return res
+}
+```
+
+* [sol2-JavaScript]
+
+```JavaScript
+var secondGreaterElement = function(nums) {
+    const n = nums.length;
+    const res = new Array(n).fill(-1);
+    const st1 = [], st2 = [];
+
+    for (let i = 0; i < n; i++) {
+        let v = nums[i];
+        while (st2.length > 0 && nums[st2[st2.length - 1]] < v) {
+            res[st2[st2.length - 1]] = v;
+            st2.pop();
+        }
+        let pos = st1.length - 1;
+        while (pos >= 0 && nums[st1[pos]] < v) {
+            pos--;
+        }
+        st2.push(...st1.slice(pos + 1, st1.length));
+        st1.splice(pos + 1);
+        st1.push(i);
+    }   
+    return res
+};
+```
+
+**复杂度分析**
+
+- 时间复杂度：$O(n)$，其中 $n$ 为数组 $\textit{nums}$ 的大小。每一个数组元素在两个单调栈中分别最多入栈和出栈一次。
+- 空间复杂度：$O(n)$，其中 $n$ 为数组 $\textit{nums}$ 的大小。两个「单调栈」的大小最多有 $n$ 个元素。
+

@@ -55,8 +55,8 @@ func Constructor() FrontMiddleBackQueue {
 }
 
 func (this *FrontMiddleBackQueue) PushFront(val int) {
-	this.head = append([]int{val},this.head... )
-	if len(this.head)>len(this.tail) {
+	this.head = append([]int{val}, this.head...)
+	if len(this.head) > len(this.tail) {
 		i := this.head[len(this.head)-1]
 		this.head = this.head[:len(this.head)-1]
 		this.tail = append(this.tail, i)
@@ -104,11 +104,11 @@ func (this *FrontMiddleBackQueue) PopMiddle() int {
 		return -1
 	}
 	res := 0
-	if len(this.head)<len(this.tail){
+	if len(this.head) < len(this.tail) {
 		res = this.tail[len(this.tail)-1]
 		this.tail = this.tail[:len(this.tail)-1]
 		return res
-	}else {
+	} else {
 		res = this.head[len(this.head)-1]
 		this.head = this.head[:len(this.head)-1]
 		return res
@@ -116,12 +116,12 @@ func (this *FrontMiddleBackQueue) PopMiddle() int {
 }
 
 func (this *FrontMiddleBackQueue) PopBack() int {
-	if   len(this.tail) == 0 {
+	if len(this.tail) == 0 {
 		return -1
 	}
 	res := this.tail[0]
 	this.tail = this.tail[1:]
-	if len(this.head)> len(this.tail){
+	if len(this.head) > len(this.tail) {
 		i := this.head[len(this.head)-1]
 		this.head = this.head[:len(this.head)-1]
 		this.tail = append(this.tail, i)

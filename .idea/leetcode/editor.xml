@@ -102,6 +102,28 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[2008]出租车的最大盈利.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[2008]出租车的最大盈利.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2008" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[2008]出租车的最大盈利.go" />
+              <option name="titleSlug" value="maximum-earnings-from-taxi" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[2276]统计区间中的整数数目.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[2276]统计区间中的整数数目.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2276" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[2276]统计区间中的整数数目.go" />
+              <option name="titleSlug" value="count-integers-in-intervals" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[2336]无限集中的最小数字.go">
           <value>
             <LeetcodeEditor>
@@ -110,6 +132,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[2336]无限集中的最小数字.go" />
               <option name="titleSlug" value="smallest-number-in-infinite-set" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[2454]下一个更大元素 IV.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[2454]下一个更大元素 IV.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2454" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[2454]下一个更大元素 IV.go" />
+              <option name="titleSlug" value="next-greater-element-iv" />
             </LeetcodeEditor>
           </value>
         </entry>

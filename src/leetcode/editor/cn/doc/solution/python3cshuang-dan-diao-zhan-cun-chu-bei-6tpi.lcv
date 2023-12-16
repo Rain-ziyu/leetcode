@@ -1,0 +1,109 @@
+> 对灵神题解 —— [《O(n) 一次遍历+双单调栈（附题单）Python/Java/C++/Go/JS/Rust》](https://leetcode.cn/problems/next-greater-element-iv/solutions/1935877/by-endlesscheng-q6t5/?envType=daily-question&envId=2023-12-12)的理解与补充
+
+# 题目
+
+## 2454. 下一个更大元素 IV
+
+给你一个下标从 **0** 开始的非负整数数组 `nums` 。对于 `nums` 中每一个整数，你必须找到对应元素的 **第二大** 整数。
+
+如果 `nums[j]` 满足以下条件，那么我们称它为 `nums[i]` 的 **第二大** 整数：
+
+- `j > i`
+- `nums[j] > nums[i]`
+- 恰好存在 **一个** `k` 满足 `i < k < j` 且 `nums[k] > nums[i]` 。
+
+如果不存在 `nums[j]` ，那么第二大整数为 `-1` 。
+
+- 比方说，数组 `[1, 2, 4, 3]` 中，`1` 的第二大整数是 `4` ，`2` 的第二大整数是 `3` ，`3` 和 `4` 的第二大整数是 `-1` 。
+
+请你返回一个整数数组 `answer` ，其中 `answer[i]`是 `nums[i]` 的第二大整数。
+
+# 题目分析
+
+## 单调栈找到首个更大元素
+
+这道题我们可以先联想到如果要找到元素 `nums[i]`之后的首个更大的元素， 我们应该怎么做呢？
+可以利用单调栈来求解，如何确定单调栈栈顶是 **最大值还是最小值呢（即栈顶到栈底是递减还是递增的）**【记单调栈为 `st` 】
+
+我们是把**遍历过的元素存储起来，等待遇到下一个大于它的值**。那么如果当前 `nums[i]` 大于栈顶元素，栈顶元素就找到首个大于它的值，那么就不需要在栈内了。
+`nums[i]` 依次淘汰栈顶小于它的元素，直到遇到一个大于等于它的元素，栈内剩下的元素都比它大，它自己也入栈等待被匹配。
+
+通过这个过程我们可以发现栈顶元素是最小值，栈顶到栈底是递增的。
+
+![image.png](https://pic.leetcode.cn/1702317118-idKnGJ-image.png)
+
+## 双单调栈找到第二大元素
+
+在上一步，我们是淘汰了`st`的栈顶元素，因为它们已经找到它们之后首个更大的元素。但现在这些元素只过了第一关，我们要找到的是第二大的元素【第二大才是它们的真命更大元素】。
+
+因此我们需要使用一个单调栈 `temp` 把这些淘汰的元素按照原有的顺序再次存储起来【即这个单调栈也是从栈顶到栈底单调递增】，当遍历到元素 `nums[i]` 时，**需要先对这个单调栈内的元素做一次相同的判断，栈顶元素小于当前元素，那么栈顶元素就找到第二大元素，可以淘汰**。
+
+我们每次从单调栈 `st`的栈顶元素应该 **保持原有的顺序直接加入** `temp`。
+因为 `temp` 要保持栈顶到栈底单调递增。而我们先将 `temp` 中小于 `nums[i]` 的元素处理掉，剩下的都是大于 `nums[i]`；而从 `st` 淘汰的元素也是小于 `nums[i]`，因此应该直接加入 `temp`。
+
+![image.png](https://pic.leetcode.cn/1702317635-VAPAPB-image.png)
+
+# 代码
+
+> 参考灵神以列表模拟栈的做法
+
+由于我们每次都只对栈的栈顶操作，如果我们**以列表或向量模拟栈**。以首个元素为栈底，以最后一个元素为栈顶，那么每次都只在最后的位置继续插入与删除，开销为 `O(1)`。
+
+同时为了能够得到元素的索引，**栈内都存储元素的索引**，既可以得到元素的本身，也可以通过索引记录对应结果。
+
+* []
+
+```Python
+class Solution:
+    def secondGreaterElement(self, nums: List[int]) -> List[int]:
+        n = len(nums)
+        ans = [-1] * n     # 结果数组，初始都为-1
+        st = []             # 单调栈，用于存储构成从栈底到栈顶单调递减的单调栈，以列表模拟，0为栈底，size()-1为栈顶
+        temp = []           # 单调栈，用于存储构建单调栈st中被淘汰的元素，同样从栈底到栈顶单调递减
+        for i, num in enumerate(nums):
+            # nums[i]大于temp栈顶的元素，temp是遇到了一个比它大而被淘汰的元素，现在nums[i]又大于它，就是第二大整数
+            while temp and nums[temp[-1]] < num:
+                ans[temp[-1]] = num
+                temp.pop()
+            # 获取单调栈中比nums[i]小的元素范围
+            j = len(st) - 1
+            while j >= 0 and nums[st[j]] < num:
+                j -= 1
+            # 将[j+1, size())这部分被淘汰的元素保持原来的顺序加入temp栈顶，以保证temp也是单调递减的
+            temp += st[j + 1: ]
+            del st[j+1: ]   # 淘汰[j+1, size())这部分元素
+            st.append(i)    # 将当前元素索引加入栈顶
+        return ans    
+```
+
+* []
+
+```C++
+class Solution {
+public:
+    vector<int> secondGreaterElement(vector<int>& nums) {
+        int n = nums.size();
+        vector<int> ans(n, -1);     // 结果数组，初始都为-1
+        vector<int> st;             // 单调栈，用于存储构成从栈底到栈顶单调递减的单调栈，以列表模拟，0为栈底，size()-1为栈顶
+        vector<int> temp;           // 单调栈，用于存储构建单调栈st中被淘汰的元素，同样从栈底到栈顶单调递减
+        for(int i = 0; i < n; i++){
+            // nums[i]大于temp栈顶的元素，temp是遇到了一个比它大而被淘汰的元素，现在nums[i]又大于它，就是第二大整数
+            while(!temp.empty() && nums[temp.back()] < nums[i]){
+                ans[temp.back()] = nums[i];
+                temp.pop_back();
+            }
+            // 获取单调栈中比nums[i]小的元素范围
+            int j = st.size() - 1;
+            while(j >= 0 && nums[st[j]] < nums[i]){
+                j--;
+            }
+            // 将[j+1, size())这部分被淘汰的元素保持原来的顺序加入temp栈顶，以保证temp也是单调递减的
+            temp.insert(temp.end(), st.begin() + (j + 1), st.end());
+            st.resize(j + 1);       // resize(j+1)相当于淘汰[j+1, size())这部分元素
+            st.emplace_back(i);     // 将当前元素索引加入栈顶
+        }
+        return ans;      
+    }
+};
+```
+
