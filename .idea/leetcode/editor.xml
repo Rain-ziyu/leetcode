@@ -25,6 +25,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1671-得到山形数组的最少删除次数.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/1671-得到山形数组的最少删除次数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1671" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1671-得到山形数组的最少删除次数.go" />
+              <option name="titleSlug" value="minimum-number-of-removals-to-make-mountain-array" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/19-删除链表的倒数第 N 个结点.go">
           <value>
             <LeetcodeEditor>
