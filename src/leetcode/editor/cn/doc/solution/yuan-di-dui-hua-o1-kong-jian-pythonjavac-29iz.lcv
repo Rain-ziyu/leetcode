@@ -1,0 +1,229 @@
+每次操作，应当选数组中最大的数，移除它的一半（下取整）。
+
+动态维护数组的最大值，可以**最大堆**模拟。
+
+循环 $k$ 次。每次循环，弹出堆顶 $\textit{x}$，然后把 $x-\left\lfloor\dfrac{x}{2}\right\rfloor = \left\lceil\dfrac{x}{2}\right\rceil$ 入堆。
+
+循环结束后，堆中所有元素之和就是答案。
+
+#### 优化
+
+1. 如果堆顶等于 $0$，说明堆中所有元素都为 $0$，后续操作无法修改任何元素，可以直接退出循环。
+2. 原地堆化（heapify）可以做到 $\mathcal{O}(1)$ 的空间复杂度。部分语言用的标准库自带的堆化函数。关于堆化是如何实现的，可以看下面的 Java 代码。
+
+* [sol-Python3]
+
+```py
+class Solution:
+    def minStoneSum(self, piles: List[int], k: int) -> int:
+        for i in range(len(piles)):
+            piles[i] *= -1  # 变成相反数，这样堆化后就是最大堆了
+        heapify(piles)  # 原地堆化
+        while k and piles[0]:
+            heapreplace(piles, piles[0] // 2)  # 负数下取整等于正数上取整
+            k -= 1
+        return -sum(piles)
+```
+
+* [sol-Java]
+
+```java
+class Solution {
+    public long minStoneSum(int[] piles, int k) {
+        heapify(piles); // 原地堆化（最大堆）
+        while (k-- > 0 && piles[0] > 0) {
+            piles[0] -= piles[0] / 2; // 直接修改堆顶
+            sink(piles, 0); // 堆化（只需要把 piles[0] 下沉）
+        }
+
+        int ans = 0;
+        for (int x : piles) {
+            ans += x;
+        }
+        return ans;
+    }
+
+    // 原地堆化（最大堆）
+    // 堆化可以保证 h[0] 是堆顶元素，且 h[i] >= max(h[2*i+1], h[2*i+2])
+    private void heapify(int[] h) {
+        // 倒着遍历，从而保证 i 的左右子树一定是堆，那么 sink(h, i) 就可以把左右子树合并成一个堆
+        // 下标 >= h.length / 2 的元素是二叉树的叶子，无需下沉
+        for (int i = h.length / 2 - 1; i >= 0; i--) {
+            sink(h, i);
+        }
+    }
+
+    // 把 h[i] 不断下沉，每次找左右儿子中最大的交换，直到 i 的左右儿子都 <= h[i] 时停止
+    private void sink(int[] h, int i) {
+        int n = h.length;
+        while (2 * i + 1 < n) {
+            int j = 2 * i + 1; // i 的左儿子
+            if (j + 1 < n && h[j + 1] > h[j]) { // i 的右儿子比 i 的左儿子大
+                j++;
+            }
+            if (h[j] <= h[i]) { // 说明 i 的左右儿子都 <= h[i]，停止下沉
+                break;
+            }
+            swap(h, i, j); // 下沉
+            i = j;
+        }
+    }
+
+    // 交换 h[i] 和 h[j]
+    private void swap(int[] h, int i, int j) {
+        int tmp = h[i];
+        h[i] = h[j];
+        h[j] = tmp;
+    }
+}
+```
+
+* [sol-C++]
+
+```cpp
+class Solution {
+public:
+    int minStoneSum(vector<int> &piles, int k) {
+        make_heap(piles.begin(), piles.end()); // 原地堆化（最大堆）
+        while (k-- && piles[0]) {
+            pop_heap(piles.begin(), piles.end()); // 弹出堆顶并移到末尾
+            piles.back() -= piles.back() / 2;
+            push_heap(piles.begin(), piles.end()); // 把末尾元素入堆
+        }
+        return accumulate(piles.begin(), piles.end(), 0);
+    }
+};
+```
+
+* [sol-Go]
+
+```go
+func minStoneSum(piles []int, k int) (ans int) {
+    h := &hp{piles}
+    heap.Init(h) // 原地堆化
+    for ; k > 0 && piles[0] > 0; k-- {
+        piles[0] -= piles[0] / 2 // 直接修改堆顶
+        heap.Fix(h, 0)
+    }
+    for _, x := range piles {
+        ans += x
+    }
+    return
+}
+
+type hp struct{ sort.IntSlice }
+func (h hp) Less(i, j int) bool { return h.IntSlice[i] > h.IntSlice[j] } // 最大堆
+func (hp) Pop() (_ any)         { return }
+func (hp) Push(any)             {}
+```
+
+* [sol-JavaScript]
+
+```js
+var minStoneSum = function (piles, k) {
+    heapify(piles); // 堆化
+    while (k-- && piles[0]) {
+        piles[0] -= Math.floor(piles[0] / 2); // 直接修改堆顶
+        sink(piles, 0); // 堆化（只需要把 piles[0] 下沉）
+    }
+    return _.sum(piles);
+};
+
+// 原地堆化（最大堆）
+// 堆化可以保证 h[0] 是堆顶元素，且 h[i] >= max(h[2*i+1], h[2*i+2])
+function heapify(h) {
+    // 倒着遍历，从而保证 i 的左右子树一定是堆，那么 sink(h, i) 就可以把左右子树合并成一个堆
+    // 下标 >= h.length / 2 的元素是二叉树的叶子，无需下沉
+    for (let i = Math.floor(h.length / 2) - 1; i >= 0; i--) {
+        sink(h, i);
+    }
+}
+
+// 把 h[i] 不断下沉，直到 i 的左右儿子都 <= h[i]
+function sink(h, i) {
+    const n = h.length;
+    while (2 * i + 1 < n) {
+        let j = 2 * i + 1; // i 的左儿子
+        if (j + 1 < n && h[j + 1] > h[j]) { // i 的右儿子比 i 的左儿子大
+            j++;
+        }
+        if (h[j] <= h[i]) { // 说明 i 的左右儿子都 <= h[i]，停止下沉
+            break;
+        }
+        [h[i], h[j]] = [h[j], h[i]]; // 下沉
+        i = j;
+    }
+}
+```
+
+* [sol-Rust]
+
+```rust
+use std::collections::BinaryHeap;
+
+impl Solution {
+    pub fn min_stone_sum(piles: Vec<i32>, k: i32) -> i32 {
+        let mut h = BinaryHeap::from(piles); // 原地堆化（最大堆）
+        for _ in 0..k {
+            let top = h.pop().unwrap();
+            h.push((top + 1) / 2);
+            if *h.peek().unwrap() == 0 {
+                break;
+            }
+        }
+        h.iter().sum()
+    }
+}
+```
+
+#### 复杂度分析
+
+- 时间复杂度：$\mathcal{O}(n + k\log n)$，其中 $n$ 为 $\textit{piles}$ 的长度。堆化需要 $\mathcal{O}(n)$ 的时间（证明见下）。每次修改堆顶，需要 $\mathcal{O}(\log n)$ 的时间。所以总的时间复杂度为 $\mathcal{O}(n + k\log n)$。
+- 空间复杂度：$\mathcal{O}(1)$，仅用到若干额外变量。
+
+#### 关于堆化的时间复杂度
+
+从 Java 代码的实现上看，堆化（heapify）的时间复杂度「似乎」是 $\mathcal{O}(n\log n)$ 的，果真如此吗？注意堆中大部分节点都集中在下层，`sink` 中的循环没几次就结束了。假设堆是一棵满二叉树，那么倒数第二层有 $\left\lceil\dfrac{n}{4}\right\rceil$ 个节点，这些节点在 `sink` 中至多循环一次。倒数第三层有 $\left\lceil\dfrac{n}{8}\right\rceil$ 个节点，这些节点在 `sink` 中至多循环两次。依此类推，总的循环次数至多为
+
+$$
+\left\lceil\dfrac{n}{2^2}\right\rceil\cdot 1 + \left\lceil\dfrac{n}{2^3}\right\rceil\cdot 2 + \left\lceil\dfrac{n}{2^4}\right\rceil\cdot 3 + \cdots + \left\lceil\dfrac{n}{2^{k+1}}\right\rceil\cdot k
+$$
+
+其中 $k = \left\lfloor\log_2{n}\right\rfloor$。
+
+在计算大 $\mathcal{O}$ 记号时，上取整符号可以忽略，从而得到
+
+$$
+\mathcal{O}\left(n\cdot\left(\dfrac{1}{2^2} + \dfrac{2}{2^3} + \cdots + \dfrac{k}{2^{k+1}}\right)\right)
+$$
+
+设
+
+$$
+S = \dfrac{1}{2^2} + \dfrac{2}{2^3} +  \dfrac{3}{2^4} + \cdots + \dfrac{k}{2^{k+1}}
+$$
+
+那么
+
+$$
+2S = \dfrac{1}{2} + \dfrac{2}{2^2} + \dfrac{3}{2^3}\cdots + \dfrac{k}{2^k}
+$$
+
+所以
+
+$$
+S = 2S - S = \dfrac{1}{2} + \dfrac{1}{2^2} + \dfrac{1}{2^3} + \cdots + \dfrac{1}{2^k} - \dfrac{k}{2^{k+1}} < 1- \dfrac{k}{2^{k+1}} < 1
+$$
+
+所以堆化的时间复杂度为 $\mathcal{O}(n)$。
+
+#### 相似题目
+
+- [2558. 从数量最多的堆取走礼物](https://leetcode.cn/problems/take-gifts-from-the-richest-pile/) 1277
+- [2530. 执行 K 次操作后的最大分数](https://leetcode.cn/problems/maximal-score-after-applying-k-operations/) 1386
+- [2208. 将数组和减半的最少操作次数](https://leetcode.cn/problems/minimum-operations-to-halve-array-sum/) 1550
+- [2233. K 次增加后的最大乘积](https://leetcode.cn/problems/maximum-product-after-k-increments/) 1686
+
+欢迎关注 [B站@灵茶山艾府](http://z6b.cn/zppIz)
+
+更多精彩题解，请看 [往期题解精选（已分类）](https://github.com/EndlessCheng/codeforces-go/blob/master/leetcode/SOLUTIONS.md)

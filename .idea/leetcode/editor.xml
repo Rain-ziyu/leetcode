@@ -47,6 +47,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1962-移除石子使总数最小.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/1962-移除石子使总数最小.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1962" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1962-移除石子使总数最小.go" />
+              <option name="titleSlug" value="remove-stones-to-minimize-the-total" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2216-美化数组的最少删除数.go">
           <value>
             <LeetcodeEditor>
