@@ -113,6 +113,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2660-保龄球游戏的获胜者.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2660-保龄球游戏的获胜者.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2660" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2660-保龄球游戏的获胜者.go" />
+              <option name="titleSlug" value="determine-the-winner-of-a-bowling-game" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2697-字典序最小回文串.go">
           <value>
             <LeetcodeEditor>
