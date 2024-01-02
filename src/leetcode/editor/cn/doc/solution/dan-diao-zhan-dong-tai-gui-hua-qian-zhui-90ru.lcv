@@ -1,0 +1,61 @@
+> Problem: [2866. 美丽塔 II](https://leetcode.cn/problems/beautiful-towers-ii/description/)
+
+[TOC]
+
+# 思路
+
+利用左右边的单调性，可使用两个单调栈记录单调性
+
+且出栈的元素则是需要修改值的元素，用动态规划记录前缀和与后缀和
+
+# Code
+
+* []
+
+```Java
+class Solution {
+    public long maximumSumOfHeights(List<Integer> maxHeights) {
+       long ans = 0L;
+        int n = maxHeights.size();
+        Deque<Integer> stack1 = new LinkedList<>();
+        long[] preSum = new long[n];
+        Deque<Integer> stack2 = new LinkedList<>();
+        long[] sufSum = new long[n];
+
+        for (int i = 0; i < n; i++) {
+            int data = maxHeights.get(i);
+            while (!stack1.isEmpty() && maxHeights.get(stack1.peek()) > data) {
+                stack1.pop();
+            }
+
+            if (stack1.isEmpty()) {
+                preSum[i] = (long) (i + 1) * data;
+            } else {
+                preSum[i] = preSum[stack1.peek()] + (long) data * (i - stack1.peek());
+            }
+
+            stack1.push(i);
+        }
+
+
+        for (int i = n - 1; i >= 0; i--) {
+            int data = maxHeights.get(i);
+            while (!stack2.isEmpty() && maxHeights.get(stack2.peek()) > data) {
+                stack2.pop();
+            }
+
+            if (stack2.isEmpty()) {
+                sufSum[i] = (long) (n - i) * data;
+            } else {
+                sufSum[i] = sufSum[stack2.peek()] + (long) data * (stack2.peek() - i);
+            }
+
+            stack2.push(i);
+            ans = Math.max(ans, preSum[i] + sufSum[i] - data);
+        }
+
+        return ans;
+    }
+}
+```
+

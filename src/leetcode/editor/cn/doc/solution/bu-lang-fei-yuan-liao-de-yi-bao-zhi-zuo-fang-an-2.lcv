@@ -1,0 +1,132 @@
+### 方法一：数学
+
+设巨无霸汉堡有 $x$ 个，皇堡有 $y$ 个，由于所有的材料都需要用完，因此我们可以得到二元一次方程组：
+
+$$
+\begin{cases}
+4x + 2y = \textit{tomatoSlices} \\
+x + y = \textit{cheeseSlices}
+\end{cases}
+$$
+
+解得：
+
+$$
+\begin{cases}
+x = \dfrac{1}{2} \times \textit{tomatoSlices} - \textit{cheeseSlices} \\
+y = 2 \times \textit{cheeseSlices} - \dfrac{1}{2} \times \textit{tomatoSlices}
+\end{cases}
+$$
+
+根据题意，$x, y \geq 0$ 且 $x, y \in \mathbb{N}$，因此需要满足：
+
+$$
+\begin{cases}
+\textit{tomatoSlices} = 2k, \quad k \in \mathbb{N} \\
+\textit{tomatoSlices} \geq 2 \times \textit{cheeseSlices} \\
+4 \times \textit{cheeseSlices} \geq \textit{tomatoSlices}
+\end{cases}
+$$
+
+若不满足，则无解。
+
+* [sol1-C++]
+
+```C++
+class Solution {
+public:
+    vector<int> numOfBurgers(int tomatoSlices, int cheeseSlices) {
+        if (tomatoSlices % 2 != 0 || tomatoSlices < cheeseSlices * 2 || cheeseSlices * 4 < tomatoSlices) {
+            return {};
+        }
+        return {tomatoSlices / 2 - cheeseSlices, cheeseSlices * 2 - tomatoSlices / 2};
+    }
+};
+```
+
+* [sol1-Python3]
+
+```Python
+class Solution:
+    def numOfBurgers(self, tomatoSlices: int, cheeseSlices: int) -> List[int]:
+        if tomatoSlices % 2 != 0 or tomatoSlices < cheeseSlices * 2 or cheeseSlices * 4 < tomatoSlices:
+            return []
+        return [tomatoSlices // 2 - cheeseSlices, cheeseSlices * 2 - tomatoSlices // 2]
+```
+
+* [sol1-C]
+
+```C
+int* numOfBurgers(int tomatoSlices, int cheeseSlices, int* returnSize) {
+if (tomatoSlices % 2 != 0 || tomatoSlices < cheeseSlices * 2 || cheeseSlices * 4 < tomatoSlices) {
+        *returnSize = 0;
+        return NULL;
+    }
+    int *ans = (int *)malloc(sizeof(int) * 2);
+    ans[0] = tomatoSlices / 2 - cheeseSlices;
+    ans[1] = cheeseSlices * 2 - tomatoSlices / 2;
+    *returnSize = 2;
+    return ans;
+}
+```
+
+* [sol1-Java]
+
+```Java
+class Solution {
+    public List<Integer> numOfBurgers(int tomatoSlices, int cheeseSlices) {
+        if (tomatoSlices % 2 != 0 || tomatoSlices < cheeseSlices * 2 || cheeseSlices * 4 < tomatoSlices) {
+            return new ArrayList<>();
+        }
+        List<Integer> ans = new ArrayList<Integer>();
+        ans.add(tomatoSlices / 2 - cheeseSlices);
+        ans.add(cheeseSlices * 2 - tomatoSlices / 2);
+        return ans;
+    }
+}
+```
+
+* [sol1-C#]
+
+```C#
+public class Solution {
+    public IList<int> NumOfBurgers(int tomatoSlices, int cheeseSlices) {
+      if (tomatoSlices % 2 != 0 || tomatoSlices < cheeseSlices * 2 || cheeseSlices * 4 < tomatoSlices) {
+            return new List<int>();
+        }
+        IList<int> ans = new List<int>();
+        ans.Add(tomatoSlices / 2 - cheeseSlices);
+        ans.Add(cheeseSlices * 2 - tomatoSlices / 2);
+        return ans;
+    }
+}
+```
+
+* [sol1-Go]
+
+```Go
+func numOfBurgers(tomatoSlices int, cheeseSlices int) []int {
+    if tomatoSlices % 2 != 0 || tomatoSlices < cheeseSlices * 2 || cheeseSlices * 4 < tomatoSlices {
+        return nil
+    }
+    return []int{tomatoSlices / 2 - cheeseSlices, cheeseSlices * 2 - tomatoSlices / 2}
+}
+```
+
+* [sol1-JavaScript]
+
+```JavaScript
+var numOfBurgers = function(tomatoSlices, cheeseSlices) {
+    if (tomatoSlices % 2 != 0 || tomatoSlices < cheeseSlices * 2 || cheeseSlices * 4 < tomatoSlices) {
+        return []
+    }
+    return [(tomatoSlices >> 1) - cheeseSlices, cheeseSlices * 2 - (tomatoSlices >> 1)];
+};
+```
+
+**复杂度分析**
+
+- 时间复杂度：$O(1)$。
+
+- 空间复杂度：$O(1)$。
+
