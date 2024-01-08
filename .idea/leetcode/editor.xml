@@ -201,6 +201,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/447-回旋镖的数量.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/447-回旋镖的数量.md" />
+              <option name="frontendQuestionId" value="leetcode.cn447" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/447-回旋镖的数量.go" />
+              <option name="titleSlug" value="number-of-boomerangs" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/907-子数组的最小值之和.go">
           <value>
             <LeetcodeEditor>
