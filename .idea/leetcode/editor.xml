@@ -102,6 +102,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2171-拿出最少数目的魔法豆.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2171-拿出最少数目的魔法豆.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2171" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2171-拿出最少数目的魔法豆.go" />
+              <option name="titleSlug" value="removing-minimum-number-of-magic-beans" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2216-美化数组的最少删除数.go">
           <value>
             <LeetcodeEditor>
