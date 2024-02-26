@@ -157,6 +157,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2583-二叉树中的第 K 大层和.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2583-二叉树中的第 K 大层和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2583" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2583-二叉树中的第 K 大层和.go" />
+              <option name="titleSlug" value="kth-largest-sum-in-a-binary-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2645-构造有效字符串的最少插入数.go">
           <value>
             <LeetcodeEditor>
@@ -352,6 +363,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/907-子数组的最小值之和.go" />
               <option name="titleSlug" value="sum-of-subarray-minimums" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/938-二叉搜索树的范围和.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/938-二叉搜索树的范围和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn938" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/938-二叉搜索树的范围和.go" />
+              <option name="titleSlug" value="range-sum-of-bst" />
             </LeetcodeEditor>
           </value>
         </entry>
