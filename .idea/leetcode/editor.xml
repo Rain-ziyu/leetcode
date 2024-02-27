@@ -267,6 +267,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2867-统计树中的合法路径数目.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2867-统计树中的合法路径数目.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2867" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2867-统计树中的合法路径数目.go" />
+              <option name="titleSlug" value="count-valid-paths-in-a-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/447-回旋镖的数量.go">
           <value>
             <LeetcodeEditor>
