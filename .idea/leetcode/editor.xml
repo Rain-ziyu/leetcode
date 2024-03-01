@@ -14,6 +14,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1-两数之和.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/1-两数之和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1-两数之和.go" />
+              <option name="titleSlug" value="two-sum" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/105-从前序与中序遍历序列构造二叉树.go">
           <value>
             <LeetcodeEditor>
@@ -135,6 +146,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2369-检查数组是否存在有效划分.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2369-检查数组是否存在有效划分.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2369" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2369-检查数组是否存在有效划分.go" />
+              <option name="titleSlug" value="check-if-there-is-a-valid-partition-for-the-array" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2454-下一个更大元素 IV.go">
           <value>
             <LeetcodeEditor>
@@ -154,6 +176,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2487-从链表中移除节点.go" />
               <option name="titleSlug" value="remove-nodes-from-linked-list" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2581-统计可能的树根数目.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2581-统计可能的树根数目.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2581" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2581-统计可能的树根数目.go" />
+              <option name="titleSlug" value="count-number-of-possible-root-nodes" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -275,6 +308,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2866-美丽塔 II.go" />
               <option name="titleSlug" value="beautiful-towers-ii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2867-统计树中的合法路径数目.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2867-统计树中的合法路径数目.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2867" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2867-统计树中的合法路径数目.go" />
+              <option name="titleSlug" value="count-valid-paths-in-a-tree" />
             </LeetcodeEditor>
           </value>
         </entry>
