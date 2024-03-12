@@ -58,6 +58,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1261-在受污染的二叉树中查找元素.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/1261-在受污染的二叉树中查找元素.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1261" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1261-在受污染的二叉树中查找元素.go" />
+              <option name="titleSlug" value="find-elements-in-a-contaminated-binary-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1276-不浪费原料的汉堡制作方案.go">
           <value>
             <LeetcodeEditor>
@@ -121,6 +132,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1962-移除石子使总数最小.go" />
               <option name="titleSlug" value="remove-stones-to-minimize-the-total" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2129-将标题首字母大写.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2129-将标题首字母大写.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2129" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2129-将标题首字母大写.go" />
+              <option name="titleSlug" value="capitalize-the-title" />
             </LeetcodeEditor>
           </value>
         </entry>
