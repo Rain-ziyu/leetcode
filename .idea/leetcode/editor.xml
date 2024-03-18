@@ -168,6 +168,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2312-卖木头块.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2312-卖木头块.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2312" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2312-卖木头块.go" />
+              <option name="titleSlug" value="selling-pieces-of-wood" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/232-用栈实现队列.go">
           <value>
             <LeetcodeEditor>
