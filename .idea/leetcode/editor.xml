@@ -267,6 +267,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2642-设计可以求最短路径的图类.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2642-设计可以求最短路径的图类.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2642" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2642-设计可以求最短路径的图类.go" />
+              <option name="titleSlug" value="design-graph-with-shortest-path-calculator" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2645-构造有效字符串的最少插入数.go">
           <value>
             <LeetcodeEditor>
