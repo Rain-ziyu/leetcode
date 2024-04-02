@@ -135,6 +135,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1997-访问完所有房间的第一天.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/1997-访问完所有房间的第一天.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1997" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1997-访问完所有房间的第一天.go" />
+              <option name="titleSlug" value="first-day-where-you-have-been-in-all-the-rooms" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2129-将标题首字母大写.go">
           <value>
             <LeetcodeEditor>
@@ -231,6 +242,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2487-从链表中移除节点.go" />
               <option name="titleSlug" value="remove-nodes-from-linked-list" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2580-统计将重叠区间合并成组的方案数.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2580-统计将重叠区间合并成组的方案数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2580" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2580-统计将重叠区间合并成组的方案数.go" />
+              <option name="titleSlug" value="count-ways-to-group-overlapping-ranges" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -374,6 +396,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2808-使循环数组所有元素相等的最少秒数.go" />
               <option name="titleSlug" value="minimum-seconds-to-equalize-a-circular-array" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2810-故障键盘.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2810-故障键盘.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2810" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2810-故障键盘.go" />
+              <option name="titleSlug" value="faulty-keyboard" />
             </LeetcodeEditor>
           </value>
         </entry>

@@ -59,6 +59,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"sort"
 )
 
@@ -81,11 +82,10 @@ func countWays(ranges [][]int) int {
 		if ranges[i][0] <= ranges[i-1][1] {
 			ranges[i][1] = max(ranges[i-1][1], ranges[i][1])
 		} else {
-			res = (res * 2) % int64((1000000000)+7)
 			result[ranges[i][0]] = ranges[i][1]
 		}
 	}
-	res = (res * 2) % int64((1000000000)+7)
+	res = int64(math.Pow(2, float64(len(result)))) % int64((1000000000)+7)
 	fmt.Println(result)
 	return int(res)
 }
