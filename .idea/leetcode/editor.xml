@@ -80,6 +80,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1379-找出克隆二叉树中的相同节点.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/1379-找出克隆二叉树中的相同节点.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1379" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1379-找出克隆二叉树中的相同节点.go" />
+              <option name="titleSlug" value="find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1410-HTML 实体解析器.go">
           <value>
             <LeetcodeEditor>
@@ -242,6 +253,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2487-从链表中移除节点.go" />
               <option name="titleSlug" value="remove-nodes-from-linked-list" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2529-正整数和负整数的最大计数.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2529-正整数和负整数的最大计数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2529" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2529-正整数和负整数的最大计数.go" />
+              <option name="titleSlug" value="maximum-count-of-positive-integer-and-negative-integer" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -572,6 +594,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/889-根据前序和后序遍历构造二叉树.go" />
               <option name="titleSlug" value="construct-binary-tree-from-preorder-and-postorder-traversal" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/894-所有可能的真二叉树.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/894-所有可能的真二叉树.md" />
+              <option name="frontendQuestionId" value="leetcode.cn894" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/894-所有可能的真二叉树.go" />
+              <option name="titleSlug" value="all-possible-full-binary-trees" />
             </LeetcodeEditor>
           </value>
         </entry>
