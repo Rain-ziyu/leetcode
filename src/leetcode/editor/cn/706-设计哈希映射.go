@@ -53,30 +53,37 @@ type MyHashMap struct {
 
 func Constructor() MyHashMap {
 	return MyHashMap{
-		val: make([][]int, 10000),
+		val: make([][]int, 769),
 	}
 }
 
 func (this *MyHashMap) Put(key int, value int) {
-	this.Remove(key)
-	this.val[key%10000] = append(this.val[key%10000], []int{key, value}...)
-
+	res := false
+	for i := 0; i < len(this.val[key%769]); i = i + 2 {
+		if this.val[key%769][i] == key {
+			this.val[key%769][i+1] = value
+			res = true
+			break
+		}
+	}
+	if !res {
+		this.val[key%769] = append(this.val[key%769], []int{key, value}...)
+	}
 }
 
 func (this *MyHashMap) Get(key int) int {
-	for i := 0; i < len(this.val[key%10000]); i = i + 2 {
-		if this.val[key%10000][i] == key {
-			return this.val[key%10000][i+1]
+	for i := 0; i < len(this.val[key%769]); i = i + 2 {
+		if this.val[key%769][i] == key {
+			return this.val[key%769][i+1]
 		}
 	}
 	return -1
 }
 
 func (this *MyHashMap) Remove(key int) {
-	for i := 0; i < len(this.val[key%10000]); i = i + 2 {
-		if this.val[key%10000][i] == key {
-			this.val[key%10000][i+1] = -1
-			this.val[key%10000][i] = -1
+	for i := 0; i < len(this.val[key%769]); i = i + 2 {
+		if this.val[key%769][i] == key {
+			this.val[key%769] = append(this.val[key%769][0:i], this.val[key%769][i+2:len(this.val[key%769])]...)
 			break
 		}
 	}
