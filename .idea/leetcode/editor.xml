@@ -278,6 +278,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2385-感染二叉树需要的总时间.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2385-感染二叉树需要的总时间.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2385" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2385-感染二叉树需要的总时间.go" />
+              <option name="titleSlug" value="amount-of-time-for-binary-tree-to-be-infected" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2454-下一个更大元素 IV.go">
           <value>
             <LeetcodeEditor>
