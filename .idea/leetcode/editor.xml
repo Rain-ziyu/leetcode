@@ -36,6 +36,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1052-爱生气的书店老板.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/1052-爱生气的书店老板.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1052" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1052-爱生气的书店老板.go" />
+              <option name="titleSlug" value="grumpy-bookstore-owner" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/11-盛最多水的容器.go">
           <value>
             <LeetcodeEditor>
