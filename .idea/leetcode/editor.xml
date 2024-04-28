@@ -25,6 +25,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1017-负二进制转换.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/1017-负二进制转换.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1017" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1017-负二进制转换.go" />
+              <option name="titleSlug" value="convert-to-base-2" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/105-从前序与中序遍历序列构造二叉树.go">
           <value>
             <LeetcodeEditor>
@@ -440,6 +451,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2735-收集巧克力.go" />
               <option name="titleSlug" value="collecting-chocolates" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2739-总行驶距离.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2739-总行驶距离.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2739" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2739-总行驶距离.go" />
+              <option name="titleSlug" value="total-distance-traveled" />
             </LeetcodeEditor>
           </value>
         </entry>
