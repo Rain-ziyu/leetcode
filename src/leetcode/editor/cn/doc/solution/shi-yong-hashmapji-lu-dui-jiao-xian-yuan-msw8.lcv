@@ -1,0 +1,44 @@
+> Problem: [1329. 将矩阵按对角线排序](https://leetcode.cn/problems/sort-the-matrix-diagonally/description/)
+
+# 思路
+
+在矩阵中，对角线上的元素 (i, j) 可以通过其行索引和列索引的差值 i - j 或和 i + j 来进行分组。这种差值或和为每条对角线提供了一个唯一的标识符。本题对角线沿右下方向,使用i - j来作为hashmap的key值来唯一标识每条对角线
+
+# Code
+
+* []
+
+```Java
+class Solution {
+        public int[][] diagonalSort(int[][] mat) {
+            int n = mat.length;
+            int m = mat[0].length;
+            
+            HashMap<Integer, List<Integer>> map = new HashMap<>();
+            
+
+            // 收集对角线上的元素
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < m; j++) {
+                    map.putIfAbsent((i-j),new ArrayList<>());
+                    map.get(i-j).add(mat[i][j]);
+                }
+            }
+            
+            // 排序
+            for (List<Integer> value : map.values()) {
+                Collections.sort(value);
+            }
+            
+            //填充原数组
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < m; j++) {
+                    // 从列表中移除并获取第一个元素
+                    mat[i][j] = map.get(i-j).remove(0);
+                }
+            }
+            return mat;
+        }
+    }
+```
+
