@@ -3,24 +3,35 @@
   <component name="LeetcodeEditor">
     <option name="projectConfig">
       <map>
-        <entry key="$PROJECT_DIR$/../Users/leet/leetcode/editor/cn/[1670]设计前中后队列.go">
+        <entry key="/var/folders/6n/d8c6hksn2bn1kpjm4ldx4nf00000gp/T/leetcode/editor/cn/[2874]有序三元组中的最大值 II.go">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[1670]设计前中后队列.md" />
-              <option name="frontendQuestionId" value="leetcode.cn1670" />
+              <option name="contentPath" value="/var/folders/6n/d8c6hksn2bn1kpjm4ldx4nf00000gp/T/leetcode/editor/cn/doc/content/[2874]有序三元组中的最大值 II.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2874" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[1670]设计前中后队列.go" />
-              <option name="titleSlug" value="design-front-middle-back-queue" />
+              <option name="path" value="/var/folders/6n/d8c6hksn2bn1kpjm4ldx4nf00000gp/T/leetcode/editor/cn/[2874]有序三元组中的最大值 II.go" />
+              <option name="titleSlug" value="maximum-value-of-an-ordered-triplet-ii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/[857]雇佣 K 名工人的最低成本.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/doc/content/[857]雇佣 K 名工人的最低成本.md" />
+              <option name="frontendQuestionId" value="leetcode.cn857" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/[857]雇佣 K 名工人的最低成本.go" />
+              <option name="titleSlug" value="minimum-cost-to-hire-k-workers" />
             </LeetcodeEditor>
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1-两数之和.go">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/1-两数之和.md" />
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/doc/content/[1]两数之和.md" />
               <option name="frontendQuestionId" value="leetcode.cn1" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1-两数之和.go" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/[1]两数之和.go" />
               <option name="titleSlug" value="two-sum" />
             </LeetcodeEditor>
           </value>
@@ -696,6 +707,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/857-雇佣 K 名工人的最低成本.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/857-雇佣 K 名工人的最低成本.md" />
+              <option name="frontendQuestionId" value="leetcode.cn857" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/857-雇佣 K 名工人的最低成本.go" />
+              <option name="titleSlug" value="minimum-cost-to-hire-k-workers" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/889-根据前序和后序遍历构造二叉树.go">
           <value>
             <LeetcodeEditor>
@@ -861,6 +883,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/857-雇佣 K 名工人的最低成本.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/857-雇佣 K 名工人的最低成本.md" />
+              <option name="frontendQuestionId" value="leetcode.cn857" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/857-雇佣 K 名工人的最低成本.go" />
+              <option name="titleSlug" value="minimum-cost-to-hire-k-workers" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/[1670]设计前中后队列.go">
           <value>
             <LeetcodeEditor>
@@ -872,14 +905,47 @@
             </LeetcodeEditor>
           </value>
         </entry>
-        <entry key="/var/folders/6n/d8c6hksn2bn1kpjm4ldx4nf00000gp/T/leetcode/editor/cn/[2874]有序三元组中的最大值 II.go">
+        <entry key="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/[1842]下个由相同数字构成的回文串.go">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="/var/folders/6n/d8c6hksn2bn1kpjm4ldx4nf00000gp/T/leetcode/editor/cn/doc/content/[2874]有序三元组中的最大值 II.md" />
-              <option name="frontendQuestionId" value="leetcode.cn2874" />
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/doc/content/[1842]下个由相同数字构成的回文串.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1842" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="/var/folders/6n/d8c6hksn2bn1kpjm4ldx4nf00000gp/T/leetcode/editor/cn/[2874]有序三元组中的最大值 II.go" />
-              <option name="titleSlug" value="maximum-value-of-an-ordered-triplet-ii" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/[1842]下个由相同数字构成的回文串.go" />
+              <option name="titleSlug" value="next-palindrome-using-same-digits" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/[1]两数之和.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/doc/content/[1]两数之和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/[1]两数之和.go" />
+              <option name="titleSlug" value="two-sum" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/[857]雇佣 K 名工人的最低成本.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/857-雇佣 K 名工人的最低成本.md" />
+              <option name="frontendQuestionId" value="leetcode.cn857" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/857-雇佣 K 名工人的最低成本.go" />
+              <option name="titleSlug" value="minimum-cost-to-hire-k-workers" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Users/leet/leetcode/editor/cn/[1670]设计前中后队列.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[1670]设计前中后队列.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1670" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[1670]设计前中后队列.go" />
+              <option name="titleSlug" value="design-front-middle-back-queue" />
             </LeetcodeEditor>
           </value>
         </entry>
