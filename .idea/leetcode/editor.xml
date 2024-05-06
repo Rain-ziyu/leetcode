@@ -14,25 +14,36 @@
             </LeetcodeEditor>
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/../Users/leet/leetcode/editor/cn/[1670]设计前中后队列.go">
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/[857]雇佣 K 名工人的最低成本.go">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[1670]设计前中后队列.md" />
-              <option name="frontendQuestionId" value="leetcode.cn1670" />
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/doc/content/[857]雇佣 K 名工人的最低成本.md" />
+              <option name="frontendQuestionId" value="leetcode.cn857" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[1670]设计前中后队列.go" />
-              <option name="titleSlug" value="design-front-middle-back-queue" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/[857]雇佣 K 名工人的最低成本.go" />
+              <option name="titleSlug" value="minimum-cost-to-hire-k-workers" />
             </LeetcodeEditor>
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1-两数之和.go">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/1-两数之和.md" />
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/doc/content/[1]两数之和.md" />
               <option name="frontendQuestionId" value="leetcode.cn1" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1-两数之和.go" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/[1]两数之和.go" />
               <option name="titleSlug" value="two-sum" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1017-负二进制转换.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/1017-负二进制转换.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1017" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1017-负二进制转换.go" />
+              <option name="titleSlug" value="convert-to-base-2" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -44,6 +55,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/105-从前序与中序遍历序列构造二叉树.go" />
               <option name="titleSlug" value="construct-binary-tree-from-preorder-and-inorder-traversal" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1052-爱生气的书店老板.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/1052-爱生气的书店老板.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1052" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1052-爱生气的书店老板.go" />
+              <option name="titleSlug" value="grumpy-bookstore-owner" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -146,6 +168,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1883-准时抵达会议现场的最小跳过休息次数.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/1883-准时抵达会议现场的最小跳过休息次数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1883" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1883-准时抵达会议现场的最小跳过休息次数.go" />
+              <option name="titleSlug" value="minimum-skips-to-arrive-at-meeting-on-time" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/19-删除链表的倒数第 N 个结点.go">
           <value>
             <LeetcodeEditor>
@@ -176,6 +209,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1997-访问完所有房间的第一天.go" />
               <option name="titleSlug" value="first-day-where-you-have-been-in-all-the-rooms" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2007-从双倍数组中还原原数组.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2007-从双倍数组中还原原数组.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2007" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2007-从双倍数组中还原原数组.go" />
+              <option name="titleSlug" value="find-original-array-from-doubled-array" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -253,6 +297,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2369-检查数组是否存在有效划分.go" />
               <option name="titleSlug" value="check-if-there-is-a-valid-partition-for-the-array" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2385-感染二叉树需要的总时间.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2385-感染二叉树需要的总时间.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2385" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2385-感染二叉树需要的总时间.go" />
+              <option name="titleSlug" value="amount-of-time-for-binary-tree-to-be-infected" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -410,6 +465,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2739-总行驶距离.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2739-总行驶距离.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2739" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2739-总行驶距离.go" />
+              <option name="titleSlug" value="total-distance-traveled" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2744-最大字符串配对数目.go">
           <value>
             <LeetcodeEditor>
@@ -542,6 +608,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/377-组合总和 Ⅳ.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/377-组合总和 Ⅳ.md" />
+              <option name="frontendQuestionId" value="leetcode.cn377" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/377-组合总和 Ⅳ.go" />
+              <option name="titleSlug" value="combination-sum-iv" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/447-回旋镖的数量.go">
           <value>
             <LeetcodeEditor>
@@ -630,6 +707,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/857-雇佣 K 名工人的最低成本.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/857-雇佣 K 名工人的最低成本.md" />
+              <option name="frontendQuestionId" value="leetcode.cn857" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/857-雇佣 K 名工人的最低成本.go" />
+              <option name="titleSlug" value="minimum-cost-to-hire-k-workers" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/889-根据前序和后序遍历构造二叉树.go">
           <value>
             <LeetcodeEditor>
@@ -660,6 +748,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/907-子数组的最小值之和.go" />
               <option name="titleSlug" value="sum-of-subarray-minimums" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/928-尽量减少恶意软件的传播 II.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/928-尽量减少恶意软件的传播 II.md" />
+              <option name="frontendQuestionId" value="leetcode.cn928" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/928-尽量减少恶意软件的传播 II.go" />
+              <option name="titleSlug" value="minimize-malware-spread-ii" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -784,7 +883,62 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/857-雇佣 K 名工人的最低成本.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/857-雇佣 K 名工人的最低成本.md" />
+              <option name="frontendQuestionId" value="leetcode.cn857" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/857-雇佣 K 名工人的最低成本.go" />
+              <option name="titleSlug" value="minimum-cost-to-hire-k-workers" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/[1670]设计前中后队列.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[1670]设计前中后队列.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1670" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[1670]设计前中后队列.go" />
+              <option name="titleSlug" value="design-front-middle-back-queue" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/[1842]下个由相同数字构成的回文串.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/doc/content/[1842]下个由相同数字构成的回文串.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1842" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/[1842]下个由相同数字构成的回文串.go" />
+              <option name="titleSlug" value="next-palindrome-using-same-digits" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/[1]两数之和.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/doc/content/[1]两数之和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/[1]两数之和.go" />
+              <option name="titleSlug" value="two-sum" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/leetcode/editor/cn/[857]雇佣 K 名工人的最低成本.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/857-雇佣 K 名工人的最低成本.md" />
+              <option name="frontendQuestionId" value="leetcode.cn857" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/857-雇佣 K 名工人的最低成本.go" />
+              <option name="titleSlug" value="minimum-cost-to-hire-k-workers" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Users/leet/leetcode/editor/cn/[1670]设计前中后队列.go">
           <value>
             <LeetcodeEditor>
               <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[1670]设计前中后队列.md" />

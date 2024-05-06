@@ -14,6 +14,7 @@
 //
 //输入：grid = [[0,1],[0,0]]
 //输出：0
+
 //解释：比赛中有两支队伍。
 //grid[0][1] == 1 表示 0 队比 1 队强。所以 0 队是冠军。
 //
@@ -55,11 +56,11 @@ func main() {
 // leetcode submit region begin(Prohibit modification and deletion)
 func findChampion(grid [][]int) int {
 	for i := range grid {
-		sum:=0
+		sum := 0
 		for i2 := range grid[i] {
 			sum += grid[i][i2]
 		}
-		if sum == len(grid)-1{
+		if sum == len(grid)-1 {
 			return i
 		}
 	}
