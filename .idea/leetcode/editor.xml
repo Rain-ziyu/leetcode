@@ -14,6 +14,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../Users/leet/leetcode/editor/cn/[1670]设计前中后队列.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[1670]设计前中后队列.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1670" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[1670]设计前中后队列.go" />
+              <option name="titleSlug" value="design-front-middle-back-queue" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/[857]雇佣 K 名工人的最低成本.go">
           <value>
             <LeetcodeEditor>
@@ -132,6 +143,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1410-HTML 实体解析器.go" />
               <option name="titleSlug" value="html-entity-parser" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1463-摘樱桃 II.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/1463-摘樱桃 II.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1463" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1463-摘樱桃 II.go" />
+              <option name="titleSlug" value="cherry-pickup-ii" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -935,17 +957,6 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/857-雇佣 K 名工人的最低成本.go" />
               <option name="titleSlug" value="minimum-cost-to-hire-k-workers" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../Users/leet/leetcode/editor/cn/[1670]设计前中后队列.go">
-          <value>
-            <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[1670]设计前中后队列.md" />
-              <option name="frontendQuestionId" value="leetcode.cn1670" />
-              <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[1670]设计前中后队列.go" />
-              <option name="titleSlug" value="design-front-middle-back-queue" />
             </LeetcodeEditor>
           </value>
         </entry>
