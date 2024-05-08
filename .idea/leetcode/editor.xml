@@ -245,6 +245,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2079-给植物浇水.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2079-给植物浇水.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2079" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2079-给植物浇水.go" />
+              <option name="titleSlug" value="watering-plants" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2129-将标题首字母大写.go">
           <value>
             <LeetcodeEditor>
