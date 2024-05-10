@@ -630,6 +630,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2960-统计已测试设备.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2960-统计已测试设备.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2960" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2960-统计已测试设备.go" />
+              <option name="titleSlug" value="count-tested-devices-after-test-operations" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/303-区域和检索 - 数组不可变.go">
           <value>
             <LeetcodeEditor>
