@@ -6,6 +6,7 @@ func main() {
 	tmp := []string{"a", "ab", "abc", "d", "cd", "bcd", "abcd"}
 	product := maxProduct(tmp)
 	fmt.Println(product)
+
 }
 
 /*
