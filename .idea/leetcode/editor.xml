@@ -344,6 +344,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2391-收集垃圾的最少总时间.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2391-收集垃圾的最少总时间.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2391" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2391-收集垃圾的最少总时间.go" />
+              <option name="titleSlug" value="minimum-amount-of-time-to-collect-garbage" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2454-下一个更大元素 IV.go">
           <value>
             <LeetcodeEditor>
@@ -407,6 +418,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2583-二叉树中的第 K 大层和.go" />
               <option name="titleSlug" value="kth-largest-sum-in-a-binary-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2589-完成所有任务的最少时间.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2589-完成所有任务的最少时间.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2589" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2589-完成所有任务的最少时间.go" />
+              <option name="titleSlug" value="minimum-time-to-complete-all-tasks" />
             </LeetcodeEditor>
           </value>
         </entry>
