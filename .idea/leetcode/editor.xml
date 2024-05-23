@@ -234,6 +234,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1953-你可以工作的最大周数.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/1953-你可以工作的最大周数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1953" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1953-你可以工作的最大周数.go" />
+              <option name="titleSlug" value="maximum-number-of-weeks-for-which-you-can-work" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1962-移除石子使总数最小.go">
           <value>
             <LeetcodeEditor>
@@ -308,6 +319,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2216-美化数组的最少删除数.go" />
               <option name="titleSlug" value="minimum-deletions-to-make-array-beautiful" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2225-找出输掉零场或一场比赛的玩家.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2225-找出输掉零场或一场比赛的玩家.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2225" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2225-找出输掉零场或一场比赛的玩家.go" />
+              <option name="titleSlug" value="find-players-with-zero-or-one-losses" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -451,6 +473,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2583-二叉树中的第 K 大层和.go" />
               <option name="titleSlug" value="kth-largest-sum-in-a-binary-tree" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2589-完成所有任务的最少时间.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2589-完成所有任务的最少时间.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2589" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2589-完成所有任务的最少时间.go" />
+              <option name="titleSlug" value="minimum-time-to-complete-all-tasks" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -627,6 +660,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2824-统计和小于目标的下标对数目.go" />
               <option name="titleSlug" value="count-pairs-whose-sum-is-less-than-target" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2831-找出最长等值子数组.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2831-找出最长等值子数组.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2831" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2831-找出最长等值子数组.go" />
+              <option name="titleSlug" value="find-the-longest-equal-subarray" />
             </LeetcodeEditor>
           </value>
         </entry>
