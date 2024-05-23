@@ -57,9 +57,13 @@
 // 1 <= milestones[i] <= 10⁹
 //
 //
-// Related Topics 贪心 数组 👍 94 👎 0
+// Related Topics 贪心 数组 👍 92 👎 0
 
 package main
+
+func main() {
+
+}
 
 // leetcode submit region begin(Prohibit modification and deletion)
 func numberOfWeeks(milestones []int) int64 {
