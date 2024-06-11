@@ -817,6 +817,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3038-相同分数的最大操作数目 I.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3038-相同分数的最大操作数目 I.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3038" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3038-相同分数的最大操作数目 I.go" />
+              <option name="titleSlug" value="maximum-number-of-operations-with-the-same-score-i" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3072-将元素分配到两个数组中 II.go">
           <value>
             <LeetcodeEditor>
