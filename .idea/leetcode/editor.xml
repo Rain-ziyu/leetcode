@@ -575,6 +575,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2713-矩阵中严格递增的单元格数.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2713-矩阵中严格递增的单元格数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2713" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2713-矩阵中严格递增的单元格数.go" />
+              <option name="titleSlug" value="maximum-strictly-increasing-cells-in-a-matrix" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2735-收集巧克力.go">
           <value>
             <LeetcodeEditor>
@@ -1023,6 +1034,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/938-二叉搜索树的范围和.go" />
               <option name="titleSlug" value="range-sum-of-bst" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/LCP 61-气温变化趋势.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/LCP 61-气温变化趋势.md" />
+              <option name="frontendQuestionId" value="leetcode.cnLCP 61" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/LCP 61-气温变化趋势.go" />
+              <option name="titleSlug" value="6CE719" />
             </LeetcodeEditor>
           </value>
         </entry>
