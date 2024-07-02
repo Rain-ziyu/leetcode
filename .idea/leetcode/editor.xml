@@ -619,6 +619,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2742-给墙壁刷油漆.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2742-给墙壁刷油漆.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2742" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2742-给墙壁刷油漆.go" />
+              <option name="titleSlug" value="painting-the-walls" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2744-最大字符串配对数目.go">
           <value>
             <LeetcodeEditor>
@@ -858,6 +869,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3072-将元素分配到两个数组中 II.go" />
               <option name="titleSlug" value="distribute-elements-into-two-arrays-ii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3115-质数的最大距离.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3115-质数的最大距离.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3115" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3115-质数的最大距离.go" />
+              <option name="titleSlug" value="maximum-prime-difference" />
             </LeetcodeEditor>
           </value>
         </entry>
