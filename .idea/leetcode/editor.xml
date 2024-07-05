@@ -289,6 +289,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2065-最大化一张图中的路径价值.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2065-最大化一张图中的路径价值.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2065" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2065-最大化一张图中的路径价值.go" />
+              <option name="titleSlug" value="maximum-path-quality-of-a-graph" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2079-给植物浇水.go">
           <value>
             <LeetcodeEditor>
@@ -869,6 +880,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3072-将元素分配到两个数组中 II.go" />
               <option name="titleSlug" value="distribute-elements-into-two-arrays-ii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3086-拾起 K 个 1 需要的最少行动次数.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3086-拾起 K 个 1 需要的最少行动次数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3086" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3086-拾起 K 个 1 需要的最少行动次数.go" />
+              <option name="titleSlug" value="minimum-moves-to-pick-k-ones" />
             </LeetcodeEditor>
           </value>
         </entry>
