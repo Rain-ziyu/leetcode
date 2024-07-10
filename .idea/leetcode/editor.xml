@@ -828,6 +828,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2970-统计移除递增子数组的数目 I.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2970-统计移除递增子数组的数目 I.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2970" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2970-统计移除递增子数组的数目 I.go" />
+              <option name="titleSlug" value="count-the-number-of-incremovable-subarrays-i" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2981-找出出现至少三次的最长特殊子字符串 I.go">
           <value>
             <LeetcodeEditor>
@@ -1023,6 +1034,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/706-设计哈希映射.go" />
               <option name="titleSlug" value="design-hashmap" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/724-寻找数组的中心下标.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/724-寻找数组的中心下标.md" />
+              <option name="frontendQuestionId" value="leetcode.cn724" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/724-寻找数组的中心下标.go" />
+              <option name="titleSlug" value="find-pivot-index" />
             </LeetcodeEditor>
           </value>
         </entry>
