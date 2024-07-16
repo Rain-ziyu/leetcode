@@ -795,6 +795,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2956-找到两个数组中的公共元素.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2956-找到两个数组中的公共元素.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2956" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2956-找到两个数组中的公共元素.go" />
+              <option name="titleSlug" value="find-common-elements-between-two-arrays" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2960-统计已测试设备.go">
           <value>
             <LeetcodeEditor>
