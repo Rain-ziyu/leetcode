@@ -630,6 +630,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2740-找出分区值.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2740-找出分区值.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2740" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2740-找出分区值.go" />
+              <option name="titleSlug" value="find-the-value-of-the-partition" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2742-给墙壁刷油漆.go">
           <value>
             <LeetcodeEditor>
