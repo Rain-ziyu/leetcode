@@ -839,6 +839,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2961-双模幂运算.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/2961-双模幂运算.md" />
+              <option name="frontendQuestionId" value="leetcode.cn2961" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/2961-双模幂运算.go" />
+              <option name="titleSlug" value="double-modular-exponentiation" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/2965-找出缺失和重复的数字.go">
           <value>
             <LeetcodeEditor>
@@ -949,6 +960,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3152-特殊数组 II.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3152-特殊数组 II.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3152" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3152-特殊数组 II.go" />
+              <option name="titleSlug" value="special-array-ii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3128-直角三角形.go">
           <value>
             <LeetcodeEditor>
@@ -1056,6 +1078,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/590-N 叉树的后序遍历.go" />
               <option name="titleSlug" value="n-ary-tree-postorder-traversal" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/600-不含连续1的非负整数.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/600-不含连续1的非负整数.md" />
+              <option name="frontendQuestionId" value="leetcode.cn600" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/600-不含连续1的非负整数.go" />
+              <option name="titleSlug" value="non-negative-integers-without-consecutive-ones" />
             </LeetcodeEditor>
           </value>
         </entry>
