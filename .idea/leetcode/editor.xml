@@ -960,6 +960,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3128-直角三角形.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3128-直角三角形.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3128" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3128-直角三角形.go" />
+              <option name="titleSlug" value="right-triangles" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3152-特殊数组 II.go">
           <value>
             <LeetcodeEditor>
@@ -971,14 +982,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3128-直角三角形.go">
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3162-优质数对的总数 I.go">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3128-直角三角形.md" />
-              <option name="frontendQuestionId" value="leetcode.cn3128" />
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3162-优质数对的总数 I.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3162" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3128-直角三角形.go" />
-              <option name="titleSlug" value="right-triangles" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3162-优质数对的总数 I.go" />
+              <option name="titleSlug" value="find-the-number-of-good-pairs-i" />
             </LeetcodeEditor>
           </value>
         </entry>
