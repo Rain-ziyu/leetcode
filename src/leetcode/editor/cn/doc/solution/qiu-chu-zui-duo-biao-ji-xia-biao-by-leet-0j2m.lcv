@@ -1,0 +1,508 @@
+#### 方法一：二分查找
+
+**思路与算法**
+
+容易发现，若我们能找到 $k$ 对标记，那么一定能找到 $k - 1$ 对标记。若我们找不到 $k$ 对标记，也一定找不到 $k + 1$ 对标记。因此答案具有单调性，可以使用二分求解。
+
+首先二分枚举 $m$，然后尝试将最小的 $m$ 个数字和最大的 $m$ 个数字一一尝试匹配。这样做的原因在于，我们可以证明若能找到 $m$ 对标记，那么最小的 $m$ 个数字和最大的 $m$ 个数字一定可以匹配。
+
+使用反证法证明，若未匹配最小的 $m$ 个数字和最大的 $m$ 个数字，那么对于某对匹配 $\textit{nums}[i]$ 与 $\textit{nums}[j]$，其中 $2 \times \textit{nums}[i] \le \textit{nums}[j]$，总会找到一个更小的 $\textit{nums}[i']$ 来替换 $\textit{nums}[i]$，或找到一个更大的 $\textit{nums}[j']$ 来替换 $\textit{nums}[j]$。
+
+因此，首先对 $\textit{nums}$ 进行排序，然后将下标 $[0, m - 1]$ 范围内的每个 $\textit{nums}[i]$，与下标 $[n - m, n - 1]$ 范围内的每个 $\textit{nums}[j]$ 尝试进行匹配，其中 $\textit{nums}[i]$ 匹配 $\textit{nums}[n - m + i]$。若所有元素都可成功匹配，则判定可以找到 $m$ 组匹配。
+
+**代码**
+
+* [sol1-C++]
+
+```C++
+class Solution {
+public:
+    int maxNumOfMarkedIndices(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        int n = nums.size();
+        int l = 0, r = n / 2;
+        auto check = [&](int m) {
+            for (int i = 0; i < m; i++) {
+                if (nums[i] * 2 > nums[n - m + i]) {
+                    return false;
+                }
+            }
+            return true;
+        };
+        while (l < r) {
+            int m = l + r + 1 >> 1;
+            if (check(m)) {
+                l = m;
+            } else {
+                r = m - 1;
+            }
+        }
+        return l * 2;
+    }
+};
+```
+
+* [sol1-Java]
+
+```Java
+class Solution {
+    public int maxNumOfMarkedIndices(int[] nums) {
+        Arrays.sort(nums);
+        int n = nums.length;
+        int l = 0, r = n / 2;
+        while (l < r) {
+            int m = l + r + 1 >> 1;
+            if (check(nums, m)) {
+                l = m;
+            } else {
+                r = m - 1;
+            }
+        }
+        return l * 2;
+    }
+
+    public boolean check(int[] nums, int m) {
+        int n = nums.length;
+        for (int i = 0; i < m; i++) {
+            if (nums[i] * 2 > nums[n - m + i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+```
+
+* [sol1-C#]
+
+```C#
+public class Solution {
+    public int MaxNumOfMarkedIndices(int[] nums) {
+        Array.Sort(nums);
+        int n = nums.Length;
+        int l = 0, r = n / 2;
+        while (l < r) {
+            int m = l + r + 1 >> 1;
+            if (Check(nums, m)) {
+                l = m;
+            } else {
+                r = m - 1;
+            }
+        }
+        return l * 2;
+    }
+
+    public bool Check(int[] nums, int m) {
+        int n = nums.Length;
+        for (int i = 0; i < m; i++) {
+            if (nums[i] * 2 > nums[n - m + i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+```
+
+* [sol1-Python3]
+
+```Python
+class Solution:
+    def maxNumOfMarkedIndices(self, nums: List[int]) -> int:
+        nums.sort()
+        n = len(nums)
+        l, r = 0, n // 2
+        def check(m):
+            for i in range(m):
+                if 2 * nums[i] > nums[n - m + i]:
+                    return False
+            return True
+        
+        while l < r:
+            m = (l + r + 1) // 2
+            if check(m):
+                l = m
+            else:
+                r = m - 1
+        return l * 2
+```
+
+* [sol1-Go]
+
+```Go
+func maxNumOfMarkedIndices(nums []int) int {
+    sort.Ints(nums)
+	n := len(nums)
+	l, r := 0, n / 2
+	check := func(m int) bool {
+		for i := 0; i < m; i++ {
+			if nums[i] * 2 > nums[n - m + i] {
+				return false
+			}
+		}
+		return true
+	}
+
+	for l < r {
+		m := (l + r + 1) >> 1
+		if check(m) {
+			l = m
+		} else {
+			r = m - 1
+		}
+	}
+
+	return l * 2
+}
+```
+
+* [sol1-C]
+
+```C
+int compare(const void* a, const void* b) {
+    return (*(int*)a - *(int*)b);
+}
+
+int check(int* nums, int numsSize, int m) {
+    for (int i = 0; i < m; i++) {
+        if (nums[i] * 2 > nums[numsSize - m + i]) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int maxNumOfMarkedIndices(int* nums, int numsSize){
+    qsort(nums, numsSize, sizeof(int), compare);
+    int n = numsSize;
+    int l = 0, r = n / 2;
+    while (l < r) {
+        int m = (l + r + 1) >> 1;
+        if (check(nums, numsSize, m)) {
+            l = m;
+        } else {
+            r = m - 1;
+        }
+    }
+
+    return l * 2;
+}
+```
+
+* [sol1-JavaScript]
+
+```JavaScript
+var maxNumOfMarkedIndices = function(nums) {
+    nums.sort((a, b) => a - b);
+    const n = nums.length;
+    let l = 0, r = Math.floor(n / 2);
+    const check = (m) => {
+        for (let i = 0; i < m; i++) {
+            if (nums[i] * 2 > nums[n - m + i]) {
+                return false;
+            }
+        }
+        return true;
+    };
+    while (l < r) {
+        const m = Math.floor((l + r + 1) / 2);
+        if (check(m)) {
+            l = m;
+        } else {
+            r = m - 1;
+        }
+    }
+    return l * 2;
+};
+```
+
+* [sol1-TypeScript]
+
+```TypeScript
+function maxNumOfMarkedIndices(nums: number[]): number {
+    nums.sort((a, b) => a - b);
+    const n = nums.length;
+    let l = 0, r = Math.floor(n / 2);
+    const check = (m: number): boolean => {
+        for (let i = 0; i < m; i++) {
+            if (nums[i] * 2 > nums[n - m + i]) {
+                return false;
+            }
+        }
+        return true;
+    };
+    while (l < r) {
+        const m = Math.floor((l + r + 1) / 2);
+        if (check(m)) {
+            l = m;
+        } else {
+            r = m - 1;
+        }
+    }
+    return l * 2;
+};
+```
+
+* [sol1-Rust]
+
+```Rust
+impl Solution {
+    pub fn max_num_of_marked_indices(mut nums: Vec<i32>) -> i32 {
+        nums.sort();
+        let n = nums.len();
+        let mut l = 0;
+        let mut r = n / 2;
+        let check = |m: usize| -> bool {
+            for i in 0..m {
+                if nums[i] * 2 > nums[n - m + i] {
+                    return false;
+                }
+            }
+            true
+        };
+
+        while l < r {
+            let m = (l + r + 1) / 2;
+            if check(m) {
+                l = m;
+            } else {
+                r = m - 1;
+            }
+        }
+        (l * 2) as i32
+    }
+}
+```
+
+**复杂度分析**
+
+- 时间复杂度：$O(n\log n)$，其中 $n$ 为 $\textit{nums}$ 的长度。对 $\textit{nums}$ 进行排序的时间复杂度为 $O(n\log n)$，二分查找的次数为 $O(\log n)$，单次查找的时间复杂度为 $O(n)$，因此总体时间复杂度为 $O(n\log n)$。
+
+- 空间复杂度：$O(\log n)$。过程中仅用到常数个变量，但排序所需要的栈空间为 $O(\log n)$。
+
+#### 方法二：双指针
+
+**思路与算法**
+
+由于长度为 $n$ 的数组最多只会产生 $\lfloor \frac{n}{2} \rfloor$ 对匹配，因此对数组从小到大排序以后，我们将数组一分为二，左侧元素只会与右侧元素匹配。
+
+具体的，我们令 $m = \lfloor \dfrac{n}{2} \rfloor$，尝试将下标在 $[0, m - 1]$ 范围内的元素 $\textit{nums}[i]$ 与下标在 $[m, n - 1]$ 范围内的元素 $\textit{nums}[j]$ 进行匹配。我们从小到大枚举 $i$，然后找到最小的 $j$ 使其满足 $2 \times \textit{nums}[i] \le \textit{nums}[j]$。那些未满足条件而被跳过的 $\textit{nums}[j]$ 将被忽略。持续这一过程，直到 $i = m$ 或 $j = n$。
+
+**代码**
+
+* [sol2-C++]
+
+```C++
+class Solution {
+public:
+    int maxNumOfMarkedIndices(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        int n = nums.size();
+        int m = n / 2;
+        int res = 0;
+        for (int i = 0, j = m; i < m && j < n; i++) {
+            while (j < n && 2 * nums[i] > nums[j]) {
+                j++;
+            }
+            if (j < n) {
+                res += 2;
+                j++;
+            }
+        }
+        return res;
+    }
+};
+```
+
+* [sol2-Java]
+
+```Java
+class Solution {
+    public int maxNumOfMarkedIndices(int[] nums) {
+        Arrays.sort(nums);
+        int n = nums.length;
+        int m = n / 2;
+        int res = 0;
+        for (int i = 0, j = m; i < m && j < n; i++) {
+            while (j < n && 2 * nums[i] > nums[j]) {
+                j++;
+            }
+            if (j < n) {
+                res += 2;
+                j++;
+            }
+        }
+        return res;
+    }
+}
+```
+
+* [sol2-C#]
+
+```C#
+public class Solution {
+    public int MaxNumOfMarkedIndices(int[] nums) {
+        Array.Sort(nums);
+        int n = nums.Length;
+        int m = n / 2;
+        int res = 0;
+        for (int i = 0, j = m; i < m && j < n; i++) {
+            while (j < n && 2 * nums[i] > nums[j]) {
+                j++;
+            }
+            if (j < n) {
+                res += 2;
+                j++;
+            }
+        }
+        return res;
+    }
+}
+```
+
+* [sol2-Python3]
+
+```Python
+class Solution:
+    def maxNumOfMarkedIndices(self, nums: List[int]) -> int:
+        nums.sort()
+        n = len(nums)
+        m = n // 2
+        res = 0
+        i, j = 0, m
+        while i < m and j < n:
+            while j < n and 2 * nums[i] > nums[j]:
+                j += 1
+            if j < n:
+                res += 2
+                j += 1
+            i += 1
+        return res
+```
+
+* [sol2-Go]
+
+```Go
+func maxNumOfMarkedIndices(nums []int) int {
+    sort.Ints(nums)
+	n := len(nums)
+	m := n / 2
+	res := 0
+	for i, j := 0, m; i < m && j < n; i++ {
+		for j < n && 2 * nums[i] > nums[j] {
+			j++
+		}
+		if j < n {
+			res += 2
+			j++
+		}
+	}
+
+	return res
+}
+```
+
+* [sol2-C]
+
+```C
+int compare(const void* a, const void* b) {
+    return (*(int*)a - *(int*)b);
+}
+
+int maxNumOfMarkedIndices(int* nums, int numsSize){
+    qsort(nums, numsSize, sizeof(int), compare);
+    int n = numsSize;
+    int m = n / 2;
+    int res = 0;
+    for (int i = 0, j = m; i < m && j < n; i++) {
+        while (j < n && 2 * nums[i] > nums[j]) {
+            j++;
+        }
+        if (j < n) {
+            res += 2;
+            j++;
+        }
+    }
+    return res;
+}
+```
+
+* [sol2-JavaScript]
+
+```JavaScript
+var maxNumOfMarkedIndices = function(nums) {
+    nums.sort((a, b) => a - b);
+    const n = nums.length;
+    const m = Math.floor(n / 2);
+    let res = 0;
+
+    for (let i = 0, j = m; i < m && j < n; i++) {
+        while (j < n && 2 * nums[i] > nums[j]) {
+            j++;
+        }
+        if (j < n) {
+            res += 2;
+            j++;
+        }
+    }
+
+    return res;
+};
+```
+
+* [sol2-TypeScript]
+
+```TypeScript
+function maxNumOfMarkedIndices(nums: number[]): number {
+    nums.sort((a, b) => a - b);
+    const n = nums.length;
+    const m = Math.floor(n / 2);
+    let res = 0;
+
+    for (let i = 0, j = m; i < m && j < n; i++) {
+        while (j < n && 2 * nums[i] > nums[j]) {
+            j++;
+        }
+        if (j < n) {
+            res += 2;
+            j++;
+        }
+    }
+
+    return res;
+};
+```
+
+* [sol2-Rust]
+
+```Rust
+impl Solution {
+    pub fn max_num_of_marked_indices(mut nums: Vec<i32>) -> i32 {
+        nums.sort();
+        let n = nums.len();
+        let m = n / 2;
+        let mut res = 0;
+        let mut i = 0;
+        let mut j = m;
+        while i < m && j < n {
+            while j < n && 2 * nums[i] > nums[j] {
+                j += 1;
+            }
+            if j < n {
+                res += 2;
+                j += 1;
+            }
+            i += 1;
+        }
+
+        res
+    }
+}
+```
+
+**复杂度分析**
+
+- 时间复杂度：$O(n\log n)$，其中 $n$ 为 $\textit{nums}$ 的长度。对 $\textit{nums}$ 进行排序的时间复杂度为 $O(n\log n)$，双指针操作时，每个元素最多被遍历一次，时间复杂度为 $O(n)$。因此总体时间复杂度为 $O(n\log n)$。
+
+- 空间复杂度：$O(\log n)$。过程中仅用到常数个变量，但排序所需要的栈空间为 $O(\log n)$。
+
