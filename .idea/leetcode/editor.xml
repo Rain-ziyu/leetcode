@@ -1092,6 +1092,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3165-不包含相邻元素的子序列的最大和.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3165-不包含相邻元素的子序列的最大和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3165" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3165-不包含相邻元素的子序列的最大和.go" />
+              <option name="titleSlug" value="maximum-sum-of-subsequence-with-non-adjacent-elements" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/377-组合总和 Ⅳ.go">
           <value>
             <LeetcodeEditor>
