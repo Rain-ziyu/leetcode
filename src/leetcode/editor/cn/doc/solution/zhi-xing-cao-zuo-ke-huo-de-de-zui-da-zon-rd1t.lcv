@@ -1,0 +1,385 @@
+#### 方法一：动态规划
+
+记 $\textit{rewardValues}$ 的最大值为 $m$，因为最后一次操作前的总奖励一定小于等于 $m - 1$，所以可获得的最大总奖励小于等于 $2m - 1$。假设上一次操作选择的奖励值为 $x_1$，那么执行操作后的总奖励 $x \ge x_1$，根据题意，后面任一操作选择的奖励值 $x_2$ 一定都大于 $x$，从而有 $x_2 \gt x_1$，因此执行的操作是按照奖励值单调递增的。
+
+根据以上推断，首先将 $\textit{rewardValues}$ 从小到大进行排序，使用 $\textit{dp}[k]$ 表示总奖励 $k$ 是否可获得，初始时 $\textit{dp}[0] = 1$，表示不执行任何操作获得总奖励 $0$。然后我们对 $\textit{rewardValues}$ 进行遍历，令当前值为 $x$，那么对于 $k \in [x, 2x - 1]$（将 $k$ 倒序枚举），将 $\textit{dp}[k]$ 更新为 $\textit{dp}[k - x]~|~\textit{dp}[k]$（符号 $|$ 表示或操作），表示先前的操作可以获得总奖励 $k - x$，那么加上 $x$ 后，就可以获取总奖励 $k$。最后返回 $\textit{dp}$ 中可以获得的最大总奖励。
+
+* [sol1-C++]
+
+```C++
+class Solution {
+public:
+    int maxTotalReward(vector<int>& rewardValues) {
+        sort(rewardValues.begin(), rewardValues.end());
+        int m = rewardValues.back();
+        vector<int> dp(2 * m);
+        dp[0] = 1;
+        for (int x : rewardValues) {
+            for (int k = 2 * x - 1; k >= x; k--) {
+                if (dp[k - x]) {
+                    dp[k] = 1;
+                }
+            }
+        }
+        int res = 0;
+        for (int i = 0; i < dp.size(); i++) {
+            if (dp[i]) {
+                res = i;
+            }
+        }
+        return res;
+    }
+};
+```
+
+* [sol1-C]
+
+```C
+int cmp(const void *a, const void *b) {
+    return *(int *)a - *(int *)b;
+}
+
+int maxTotalReward(int *rewardValues, int rewardValuesSize) {
+    qsort(rewardValues, rewardValuesSize, sizeof(int), cmp);
+    int m = rewardValues[rewardValuesSize - 1];
+    int* dp = (int*)malloc(2 * m * sizeof(int));
+    memset(dp, 0, 2 * m * sizeof(int));
+    dp[0] = 1;
+    for (int i = 0; i < rewardValuesSize; i++) {
+        int x = rewardValues[i];
+        for (int k = 2 * x - 1; k >= x; k--) {
+            if (dp[k - x] == 1) {
+                dp[k] = 1;
+            }
+        }
+    }
+    int res = 0;
+    for (int i = 0; i < 2 * m; i++) {
+        if (dp[i] == 1) {
+            res = i;
+        }
+    }
+    free(dp);
+    return res;
+}
+```
+
+* [sol1-Go]
+
+```Go
+func maxTotalReward(rewardValues []int) int {
+    sort.Ints(rewardValues)
+	m := rewardValues[len(rewardValues) - 1]
+	dp := make([]int, 2 * m)
+	dp[0] = 1
+	for _, x := range rewardValues {
+		for k := 2 * x - 1; k >= x; k-- {
+			if dp[k - x] == 1 {
+				dp[k] = 1
+			}
+		}
+	}
+	res := 0
+	for i := 0; i < len(dp); i++ {
+		if dp[i] == 1 {
+			res = i
+		}
+	}
+	return res
+}
+```
+
+* [sol1-Python3]
+
+```Python
+class Solution:
+    def maxTotalReward(self, rewardValues: List[int]) -> int:
+        rewardValues.sort()
+        m = rewardValues[-1]
+        dp = [0] * (2 * m)
+        dp[0] = 1
+        for x in rewardValues:
+            for k in range(2 * x - 1, x - 1, -1):
+                if dp[k - x] == 1:
+                    dp[k] = 1
+        res = 0
+        for i in range(len(dp)):
+            if dp[i] == 1:
+                res = i
+        return res
+```
+
+* [sol1-Java]
+
+```Java
+class Solution {
+    public int maxTotalReward(int[] rewardValues) {
+        Arrays.sort(rewardValues);
+        int m = rewardValues[rewardValues.length - 1];
+        int[] dp = new int[2 * m];
+        dp[0] = 1;
+        for (int x : rewardValues) {
+            for (int k = 2 * x - 1; k >= x; k--) {
+                if (dp[k - x] == 1) {
+                    dp[k] = 1;
+                }
+            }
+        }
+        int res = 0;
+        for (int i = 0; i < dp.length; i++) {
+            if (dp[i] == 1) {
+                res = i;
+            }
+        }
+        return res;
+    }
+}
+```
+
+* [sol1-C#]
+
+```C#
+public class Solution {
+    public int MaxTotalReward(int[] rewardValues) {
+        Array.Sort(rewardValues);
+        int m = rewardValues[rewardValues.Length - 1];
+        int[] dp = new int[2 * m];
+        dp[0] = 1;
+        foreach (int x in rewardValues) {
+            for (int k = 2 * x - 1; k >= x; k--) {
+                if (dp[k - x] == 1) {
+                    dp[k] = 1;
+                }
+            }
+        }
+        int res = 0;
+        for (int i = 0; i < dp.Length; i++) {
+            if (dp[i] == 1) {
+                res = i;
+            }
+        }
+        return res;
+    }
+}
+```
+
+* [sol1-JavaScript]
+
+```JavaScript
+var maxTotalReward = function(rewardValues) {
+    rewardValues.sort((a, b) => a - b);
+    const m = rewardValues[rewardValues.length - 1];
+    const dp = Array(2 * m).fill(0);
+    dp[0] = 1;
+    for (let x of rewardValues) {
+        for (let k = 2 * x - 1; k >= x; k--) {
+            if (dp[k - x] === 1) {
+                dp[k] = 1;
+            }
+        }
+    }
+    let res = 0;
+    for (let i = 0; i < dp.length; i++) {
+        if (dp[i] === 1) {
+            res = i;
+        }
+    }
+    return res;
+};
+```
+
+* [sol1-TypeScript]
+
+```TypeScript
+function maxTotalReward(rewardValues: number[]): number {
+    rewardValues.sort((a, b) => a - b);
+    const m = rewardValues[rewardValues.length - 1];
+    const dp = Array(2 * m).fill(0);
+    dp[0] = 1;
+    for (let x of rewardValues) {
+        for (let k = 2 * x - 1; k >= x; k--) {
+            if (dp[k - x] === 1) {
+                dp[k] = 1;
+            }
+        }
+    }
+    let res = 0;
+    for (let i = 0; i < dp.length; i++) {
+        if (dp[i] === 1) {
+            res = i;
+        }
+    }
+    return res;
+};
+```
+
+* [sol1-Rust]
+
+```Rust
+impl Solution {
+    pub fn max_total_reward(reward_values: Vec<i32>) -> i32 {
+        let mut reward_values = reward_values.clone();
+        reward_values.sort();
+        let m = reward_values[reward_values.len() - 1] as usize;
+        let mut dp = vec![0; 2 * m];
+        dp[0] = 1;
+
+        for &x in &reward_values {
+            let x = x as usize;
+            for k in (x..2 * x).rev() {
+                if dp[k - x] == 1 {
+                    dp[k] = 1;
+                }
+            }
+        }
+
+        let mut res = 0;
+        for (i, &value) in dp.iter().enumerate() {
+            if value == 1 {
+                res = i;
+            }
+        }
+        res as i32
+    }
+}
+```
+
+**复杂度分析**
+
+- 时间复杂度：$O(n(m + \log n))$，其中 $n$，$m$ 分别是 $\textit{rewardValues}$ 的长度和最大值。
+
+- 空间复杂度：$O(m + \log n)$。
+
+#### 方法二：位运算优化 + 动态规划
+
+根据方法一的推断，一次操作前后的 $\textit{dp}$ 数组（分别记为 $f_1$ 和 $f_0$）之前的递推关系为：
+
+$$
+f_0[k] = f_1[k - x]~|~f_0[k], k \in [x, 2x - 1]
+$$
+
+可以用位运算表示为 $f_0 = (\text{mask}_x(f_1) \ll x)~|~f_0$，其中 $\text{mask}_x(f_1)$ 函数表示取 $f_1$ 的低 $x$ 位。因此我们可以使用位运算对动态规划进行优化，降低时间复杂度。
+
+* [sol2-C++]
+
+```C++
+class Solution {
+public:
+    int maxTotalReward(vector<int>& rewardValues) {
+        sort(rewardValues.begin(), rewardValues.end());
+        bitset<100000> f0, f1;
+        f0[0] = 1;
+        for (int i = 0, j = 0; i < rewardValues.size(); i++) {
+            while (j < rewardValues[i]) {
+                f1[j] = f0[j];
+                j++;
+            }
+            f0 |= f1 << rewardValues[i];
+        }
+        int res = 0;
+        for (int i = 0; i < f0.size(); i++) {
+            if (f0[i]) {
+                res = i;
+            }
+        }
+        return res;
+    }
+};
+```
+
+* [sol2-Go]
+
+```Go
+func maxTotalReward(rewardValues []int) int {
+    sort.Ints(rewardValues)
+    f0, f1 := big.NewInt(1), big.NewInt(0)
+    for _, x := range rewardValues {
+        mask, one := big.NewInt(0), big.NewInt(1)
+        mask.Sub(mask.Lsh(one, uint(x)), one)
+        f1.Lsh(f1.And(f0, mask), uint(x))
+        f0.Or(f0, f1)
+    }
+    return f0.BitLen() - 1
+}
+```
+
+* [sol2-Python3]
+
+```Python
+class Solution:
+    def maxTotalReward(self, rewardValues: List[int]) -> int:
+        rewardValues.sort()
+        f = 1
+        for x in rewardValues:
+            f |= (f & ((1 << x) - 1)) << x
+        return f.bit_length() - 1
+```
+
+* [sol2-Java]
+
+```Java
+import java.math.BigInteger;
+
+class Solution {
+    public int maxTotalReward(int[] rewardValues) {
+        Arrays.sort(rewardValues);
+        BigInteger f = BigInteger.ONE;
+        for (int x : rewardValues) {
+            BigInteger mask = BigInteger.ONE.shiftLeft(x).subtract(BigInteger.ONE);
+            f = f.or(f.and(mask).shiftLeft(x));
+        }
+        return f.bitLength() - 1;
+    }
+}
+```
+
+* [sol2-C#]
+
+```C#
+public class Solution {
+    public int MaxTotalReward(int[] rewardValues) {
+        Array.Sort(rewardValues);
+        BigInteger f = BigInteger.One;
+        foreach (int x in rewardValues) {
+            BigInteger mask = (BigInteger.One << x) - BigInteger.One;
+            f |= (f & mask) << x;
+        }
+        return (int)f.GetBitLength() - 1;
+    }
+}
+```
+
+* [sol2-JavaScript]
+
+```JavaScript
+var maxTotalReward = function(rewardValues) {
+    rewardValues.sort((a, b) => a - b);
+    let f = BigInt(1);
+    for (let x of rewardValues) {
+        let mask = (BigInt(1) << BigInt(x)) - BigInt(1);
+        f = f | ((f & mask) << BigInt(x));
+    }
+    return f.toString(2).length - 1;
+};
+```
+
+* [sol2-TypeScript]
+
+```TypeScript
+function maxTotalReward(rewardValues: number[]): number {
+    rewardValues.sort((a, b) => a - b);
+    let f = BigInt(1);
+    for (let x of rewardValues) {
+        let mask = (BigInt(1) << BigInt(x)) - BigInt(1);
+        f = f | ((f & mask) << BigInt(x));
+    }
+    return f.toString(2).length - 1;
+};
+```
+
+**复杂度分析**
+
+- 时间复杂度：$O(n(\frac{m}{w} + \log n))$，其中 $n$，$m$ 分别是 $\textit{rewardValues}$ 的长度和最大值，$w$ 表示编程语言的整数位数。
+
+- 空间复杂度：$O(\frac{m}{w} + \log n)$。
+

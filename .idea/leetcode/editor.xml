@@ -190,6 +190,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1547-切棍子的最小成本.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/1547-切棍子的最小成本.md" />
+              <option name="frontendQuestionId" value="leetcode.cn1547" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/1547-切棍子的最小成本.go" />
+              <option name="titleSlug" value="minimum-cost-to-cut-a-stick" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/1671-得到山形数组的最少删除次数.go">
           <value>
             <LeetcodeEditor>
@@ -1048,6 +1059,39 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3152-特殊数组 II.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3152-特殊数组 II.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3152" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3152-特殊数组 II.go" />
+              <option name="titleSlug" value="special-array-ii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3158-求出出现两次数字的 XOR 值.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3158-求出出现两次数字的 XOR 值.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3158" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3158-求出出现两次数字的 XOR 值.go" />
+              <option name="titleSlug" value="find-the-xor-of-numbers-which-appear-twice" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3162-优质数对的总数 I.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3162-优质数对的总数 I.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3162" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3162-优质数对的总数 I.go" />
+              <option name="titleSlug" value="find-the-number-of-good-pairs-i" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3164-优质数对的总数 II.go">
           <value>
             <LeetcodeEditor>
@@ -1070,25 +1114,124 @@
             </LeetcodeEditor>
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3152-特殊数组 II.go">
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3175-找到连续赢 K 场比赛的第一位玩家.go">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3152-特殊数组 II.md" />
-              <option name="frontendQuestionId" value="leetcode.cn3152" />
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3175-找到连续赢 K 场比赛的第一位玩家.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3175" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3152-特殊数组 II.go" />
-              <option name="titleSlug" value="special-array-ii" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3175-找到连续赢 K 场比赛的第一位玩家.go" />
+              <option name="titleSlug" value="find-the-first-player-to-win-k-games-in-a-row" />
             </LeetcodeEditor>
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3162-优质数对的总数 I.go">
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3180-执行操作可获得的最大总奖励 I.go">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3162-优质数对的总数 I.md" />
-              <option name="frontendQuestionId" value="leetcode.cn3162" />
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3180-执行操作可获得的最大总奖励 I.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3180" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3162-优质数对的总数 I.go" />
-              <option name="titleSlug" value="find-the-number-of-good-pairs-i" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3180-执行操作可获得的最大总奖励 I.go" />
+              <option name="titleSlug" value="maximum-total-reward-using-operations-i" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3184-构成整天的下标对数目 I.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3184-构成整天的下标对数目 I.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3184" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3184-构成整天的下标对数目 I.go" />
+              <option name="titleSlug" value="count-pairs-that-form-a-complete-day-i" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3185-构成整天的下标对数目 II.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3185-构成整天的下标对数目 II.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3185" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3185-构成整天的下标对数目 II.go" />
+              <option name="titleSlug" value="count-pairs-that-form-a-complete-day-ii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3200-三角形的最大高度.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3200-三角形的最大高度.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3200" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3200-三角形的最大高度.go" />
+              <option name="titleSlug" value="maximum-height-of-a-triangle" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3211-生成不含相邻零的二进制字符串.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3211-生成不含相邻零的二进制字符串.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3211" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3211-生成不含相邻零的二进制字符串.go" />
+              <option name="titleSlug" value="generate-binary-strings-without-adjacent-zeros" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3216-交换后字典序最小的字符串.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3216-交换后字典序最小的字符串.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3216" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3216-交换后字典序最小的字符串.go" />
+              <option name="titleSlug" value="lexicographically-smallest-string-after-a-swap" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3243-新增道路查询后的最短距离 I.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3243-新增道路查询后的最短距离 I.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3243" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3243-新增道路查询后的最短距离 I.go" />
+              <option name="titleSlug" value="shortest-distance-after-road-addition-queries-i" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3244-新增道路查询后的最短距离 II.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3244-新增道路查询后的最短距离 II.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3244" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3244-新增道路查询后的最短距离 II.go" />
+              <option name="titleSlug" value="shortest-distance-after-road-addition-queries-ii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3255-长度为 K 的子数组的能量值 II.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3255-长度为 K 的子数组的能量值 II.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3255" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3255-长度为 K 的子数组的能量值 II.go" />
+              <option name="titleSlug" value="find-the-power-of-k-size-subarrays-ii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3258-统计满足 K 约束的子字符串数量 I.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3258-统计满足 K 约束的子字符串数量 I.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3258" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3258-统计满足 K 约束的子字符串数量 I.go" />
+              <option name="titleSlug" value="count-substrings-that-satisfy-k-constraint-i" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -1213,6 +1356,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/661-图片平滑器.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/661-图片平滑器.md" />
+              <option name="frontendQuestionId" value="leetcode.cn661" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/661-图片平滑器.go" />
+              <option name="titleSlug" value="image-smoother" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/670-最大交换.go">
           <value>
             <LeetcodeEditor>
@@ -1254,6 +1408,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/724-寻找数组的中心下标.go" />
               <option name="titleSlug" value="find-pivot-index" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/743-网络延迟时间.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/743-网络延迟时间.md" />
+              <option name="frontendQuestionId" value="leetcode.cn743" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/743-网络延迟时间.go" />
+              <option name="titleSlug" value="network-delay-time" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -1309,6 +1474,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/907-子数组的最小值之和.go" />
               <option name="titleSlug" value="sum-of-subarray-minimums" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/910-最小差值 II.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/910-最小差值 II.md" />
+              <option name="frontendQuestionId" value="leetcode.cn910" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/910-最小差值 II.go" />
+              <option name="titleSlug" value="smallest-range-ii" />
             </LeetcodeEditor>
           </value>
         </entry>

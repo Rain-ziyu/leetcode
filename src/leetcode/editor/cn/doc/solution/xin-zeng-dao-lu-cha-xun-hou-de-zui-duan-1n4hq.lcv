@@ -1,0 +1,242 @@
+#### 方法一：贪心
+
+由题意可知：
+
+1. 对于任一从城市 $u$ 到城市 $v$ 的单向道路，都有 $u \lt v$。
+
+2. 不会存在两条单向道路 $[u_0, v_0]$ 和 $[u_1, v_1]$，满足 $u_0 \lt u_1 \lt v_0 \lt v_1$。将单向道路看成区间，那么任意两条单向道路要么是不相交的关系，要么是包含的关系。
+
+基于以上两点，我们可以贪心地选择最短路径经过的单向道路。具体地，初始时所有单向道路都是互不包含的关系，那么选择所有单向道路是最优的，最短路径的长度 $\textit{dist} = n - 1$ 为所有单向道路的数目。当我们新增一条单向道路时：
+
+- 如果它已经被任一现有的单向道路所包含，那么选择它不会使路径更短，直接忽略它。
+
+- 否则，我们去掉所有被新增单向道路所包含的现有单向道路，记数目为 $m$，然后将该新增单向道路加入最短路径中，此时最短路径的长度更新为 $\textit{dist} - m + 1$。
+
+具体实现上，我们可以使用 $\textit{roads}$ 表示最短路径经过的所有单向道路。$\textit{roads}[u] = v$ 表示从城市 $u$ 到城市 $v$ 的一条单向道路，而 $\textit{roads}[u] = -1$ 时，表示不经过城市 $u$（也表示以 $u$ 起始的所有单向道路已经有对应的范围更大的单向道路）。记新增的道路为 $\textit{query} = [u, v]$：
+
+- 如果 $\textit{roads}[u] = -1$，那么说明选择 $\textit{query}$ 不会使路径更短，忽略它。
+
+- 否则我们不断地删除 $[u, v]$ 之间的所有单向道路，然后将 $[u, v]$ 加入最短路径中。
+
+* [sol1-C++]
+
+```C++
+class Solution {
+public:
+    vector<int> shortestDistanceAfterQueries(int n, vector<vector<int>>& queries) {
+        vector<int> roads(n);
+        iota(roads.begin(), roads.end(), 1);
+        vector<int> res;
+        int dist = n - 1;
+        for (auto &query : queries) {
+            int k = roads[query[0]];
+            roads[query[0]] = query[1];
+            while (k != -1 && k < query[1]) {
+                int t = roads[k];
+                roads[k] = -1;
+                k = t;
+                dist--;
+            }
+            res.push_back(dist); 
+        }
+        return res;
+    }
+};
+```
+
+* [sol1-C]
+
+```C
+int *shortestDistanceAfterQueries(int n, int **queries, int queriesSize, int *queriesColSize, int *returnSize) {
+    int *roads = (int *)malloc(n * sizeof(int));
+    for (int i = 0; i < n; i++) {
+        roads[i] = i + 1;
+    }
+    int *res = (int *)malloc(queriesSize * sizeof(int));
+    *returnSize = queriesSize;
+    int dist = n - 1;
+    for (int i = 0; i < queriesSize; i++) {
+        int k = roads[queries[i][0]];
+        roads[queries[i][0]] = queries[i][1];
+        while (k != -1 && k < queries[i][1]) {
+            int t = roads[k];
+            roads[k] = -1;
+            k = t;
+            dist--;
+        }
+        res[i] = dist;
+    }
+    free(roads);
+    return res;
+}
+```
+
+* [sol1-Go]
+
+```Go
+func shortestDistanceAfterQueries(n int, queries [][]int) []int {
+    roads := make([]int, n)
+    for i := 0; i < n; i++ {
+        roads[i] = i + 1;
+    }
+    var res []int
+    dist := n - 1
+    for _, query := range queries {
+        k := roads[query[0]]
+        roads[query[0]] = query[1]
+        for k != -1 && k < query[1] {
+            k, roads[k] = roads[k], -1
+            dist--
+        }
+        res = append(res, dist)
+    }
+    return res
+}
+```
+
+* [sol1-Python3]
+
+```Python
+class Solution:
+    def shortestDistanceAfterQueries(self, n: int, queries: List[List[int]]) -> List[int]:
+        roads = [i + 1 for i in range(n)]
+        res = []
+        dist = n - 1
+        for query in queries:
+            k = roads[query[0]]
+            roads[query[0]] = query[1]
+            while k != -1 and k < query[1]:
+                roads[k], k = -1, roads[k]
+                dist -= 1
+            res.append(dist)
+        return res
+```
+
+* [sol1-Java]
+
+```Java
+class Solution {
+    public int[] shortestDistanceAfterQueries(int n, int[][] queries) {
+        int[] roads = new int[n];
+        for (int i = 0; i < n; i++) {
+            roads[i] = i + 1;
+        }
+        int[] res = new int[queries.length];
+        int dist = n - 1;
+        for (int i = 0; i < queries.length; i++) {
+            int k = roads[queries[i][0]];
+            roads[queries[i][0]] = queries[i][1];
+            while (k != -1 && k < queries[i][1]) {
+                int t = roads[k];
+                roads[k] = -1;
+                k = t;
+                dist--;
+            }
+            res[i] = dist;
+        }
+        return res;
+    }
+}
+```
+
+* [sol1-C#]
+
+```C#
+public class Solution {
+    public int[] ShortestDistanceAfterQueries(int n, int[][] queries) {
+        int[] roads = new int[n];
+        for (int i = 0; i < n; i++) {
+            roads[i] = i + 1;
+        }
+        int[] res = new int[queries.Length];
+        int dist = n - 1;
+        for (int i = 0; i < queries.Length; i++) {
+            int k = roads[queries[i][0]];
+            roads[queries[i][0]] = queries[i][1];
+            while (k != -1 && k < queries[i][1]) {
+                int t = roads[k];
+                roads[k] = -1;
+                k = t;
+                dist--;
+            }
+            res[i] = dist;
+        }
+        return res;
+    }
+}
+```
+
+* [sol1-JavaScript]
+
+```JavaScript
+var shortestDistanceAfterQueries = function(n, queries) {
+    let roads = new Array(n).fill(0).map((_, i) => i + 1);
+    let res = [];
+    let dist = n - 1;
+    for (let i = 0; i < queries.length; i++) {
+        let k = roads[queries[i][0]];
+        roads[queries[i][0]] = queries[i][1];
+        while (k !== -1 && k < queries[i][1]) {
+            let t = roads[k];
+            roads[k] = -1;
+            k = t;
+            dist--;
+        }
+        res.push(dist);
+    }
+    return res;
+};
+```
+
+* [sol1-TypeScript]
+
+```TypeScript
+function shortestDistanceAfterQueries(n: number, queries: number[][]): number[] {
+    let roads = new Array(n).fill(0).map((_, i) => i + 1);
+    let res = [];
+    let dist = n - 1;
+    for (let i = 0; i < queries.length; i++) {
+        let k = roads[queries[i][0]];
+        roads[queries[i][0]] = queries[i][1];
+        while (k !== -1 && k < queries[i][1]) {
+            let t = roads[k];
+            roads[k] = -1;
+            k = t;
+            dist--;
+        }
+        res.push(dist);
+    }
+    return res;
+};
+```
+
+* [sol1-Rust]
+
+```Rust
+impl Solution {
+    pub fn shortest_distance_after_queries(n: i32, queries: Vec<Vec<i32>>) -> Vec<i32> {
+        let mut roads: Vec<i32> = (1..=n).collect();
+        let mut res: Vec<i32> = Vec::new();
+        let mut dist = n - 1;
+        for query in &queries {
+            let mut k = roads[query[0] as usize];
+            roads[query[0] as usize] = query[1];
+            while k != -1 && k < query[1] {
+                let t = roads[k as usize];
+                roads[k as usize] = -1;
+                k = t;
+                dist -= 1;
+            }
+            res.push(dist);
+        }
+        res
+    }
+}
+```
+
+**复杂度分析**
+
+- 时间复杂度：$O(n + q)$，其中 $n$ 是城市的数目，$q$ 为查询数目。第二个循环的总迭代次数最多为初始的单向道路数目 $n$ 加查询新增的单向道路数目 $q$。
+
+- 空间复杂度：$O(n)$。
+

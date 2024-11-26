@@ -1,0 +1,409 @@
+#### 方法一：枚举高度
+
+**思路与算法**
+
+我们可以递增地枚举三角形的高度，在第 $i$ 行时，如果对应的颜色的剩余球数大于等于 $i$ 个，那么就可以组成第 $i$ 行，否则不能，三角形的最大高度为 $i-1$。
+
+三角形的颜色布局有两种可能：即红蓝交替（第一行为红色）或者蓝红交替（第一行为蓝色），我们分别枚举这两种情况，并取二者高度的较大值即可。
+
+**代码**
+
+* [sol1-C++]
+
+```C++
+class Solution {
+public:
+    int maxHeightOfTriangle(int red, int blue) {
+        auto maxHeight = [](int x, int y) -> int {
+            for (int i = 1;; ++i) {
+                if (i % 2 == 1) {
+                    x -= i;
+                    if (x < 0) {
+                        return i - 1;
+                    }
+                }
+                else {
+                    y -= i;
+                    if (y < 0) {
+                        return i - 1;
+                    }
+                }
+            }
+        };
+        return max(maxHeight(red, blue), maxHeight(blue, red));
+    }
+};
+```
+
+* [sol1-Python3]
+
+```Python
+class Solution:
+    def maxHeightOfTriangle(self, red: int, blue: int) -> int:
+        def maxHeight(x: int, y: int) -> int:
+            i = 1
+            while True:
+                if i % 2 == 1:
+                    x -= i
+                    if x < 0:
+                        return i - 1
+                else:
+                    y -= i
+                    if y < 0:
+                        return i - 1
+                i += 1
+        
+        return max(maxHeight(red, blue), maxHeight(blue, red))
+```
+
+* [sol1-Java]
+
+```Java
+class Solution {
+    public int maxHeightOfTriangle(int red, int blue) {
+        return Math.max(maxHeight(red, blue), maxHeight(blue, red));
+    }
+
+    public int maxHeight(int x, int y) {
+        int i = 1;
+        do {
+            if (i % 2 == 1) {
+                x -= i;
+                if (x < 0) {
+                    return i - 1;
+                }
+            } else {
+                y -= i;
+                if (y < 0) {
+                    return i - 1;
+                }
+            }
+            i++;
+        } while (true);
+    }
+}
+```
+
+* [sol1-C#]
+
+```C#
+public class Solution {
+    public int MaxHeightOfTriangle(int red, int blue) {
+        return Math.Max(MaxHeight(red, blue), MaxHeight(blue, red));
+    }
+
+    public int MaxHeight(int x, int y) {
+        int i = 1;
+        do {
+            if (i % 2 == 1) {
+                x -= i;
+                if (x < 0) {
+                    return i - 1;
+                }
+            } else {
+                y -= i;
+                if (y < 0) {
+                    return i - 1;
+                }
+            }
+            i++;
+        } while (true);
+    }
+}
+```
+
+* [sol1-Go]
+
+```Go
+func maxHeightOfTriangle(red int, blue int) int {
+    return max(maxHeight(red, blue), maxHeight(blue, red))
+}
+
+func maxHeight(x, y int) int {
+	for i := 1; ; i++ {
+		if i%2 == 1 {
+			x -= i
+			if x < 0 {
+				return i - 1
+			}
+		} else {
+			y -= i
+			if y < 0 {
+				return i - 1
+			}
+		}
+	}
+}
+```
+
+* [sol1-C]
+
+```C
+int maxHeight(int x, int y) {
+    for (int i = 1;; ++i) {
+        if (i % 2 == 1) {
+            x -= i;
+            if (x < 0) {
+                return i - 1;
+            }
+        } else {
+            y -= i;
+            if (y < 0) {
+                return i - 1;
+            }
+        }
+    }
+}
+
+int maxHeightOfTriangle(int red, int blue) {
+    return fmax(maxHeight(red, blue), maxHeight(blue, red));
+}
+```
+
+* [sol1-JavaScript]
+
+```JavaScript
+var maxHeightOfTriangle = function(red, blue) {
+    const maxHeight = (x, y) => {
+        for (let i = 1;; i++) {
+            if (i % 2 === 1) {
+                x -= i;
+                if (x < 0) {
+                    return i - 1;
+                }
+            } else {
+                y -= i;
+                if (y < 0) {
+                    return i - 1;
+                }
+            }
+        }
+    }
+
+    return Math.max(maxHeight(red, blue), maxHeight(blue, red));
+};
+```
+
+* [sol1-TypeScript]
+
+```TypeScript
+function maxHeightOfTriangle(red: number, blue: number): number {
+    return Math.max(maxHeight(red, blue), maxHeight(blue, red));
+};
+
+function maxHeight(x: number, y: number): number {
+    for (let i = 1;; i++) {
+        if (i % 2 === 1) {
+            x -= i;
+            if (x < 0) {
+                return i - 1;
+            }
+        } else {
+            y -= i;
+            if (y < 0) {
+                return i - 1;
+            }
+        }
+    }
+}
+```
+
+* [sol1-Rust]
+
+```Rust
+use std::cmp::max;
+
+impl Solution {
+    pub fn max_height_of_triangle(red: i32, blue: i32) -> i32 {
+        fn max_height(mut x: i32, mut y: i32) -> i32 {
+            let mut i = 1;
+            loop {
+                if i % 2 == 1 {
+                    x -= i;
+                    if x < 0 {
+                        return i - 1;
+                    }
+                } else {
+                    y -= i;
+                    if y < 0 {
+                        return i - 1;
+                    }
+                }
+                i += 1;
+            }
+        }
+        max(max_height(red, blue), max_height(blue, red))
+    }
+}
+```
+
+**复杂度分析**
+
+- 时间复杂度：$O(\sqrt{n})$，其中 $n$ 是题目中给定的 $\textit{red}$ 和 $\textit{blue}$ 的范围。同一种颜色的球形成一个公差为 $2$ 的等差数列，那么球的数量是三角形高度的平方级别，因此高度是数量的平方根级别，即 $O(\sqrt{n})$。
+
+- 空间复杂度：$O(1)$。
+
+#### 方法二：直接计算出高度
+
+**思路与算法**
+
+我们也可以使用等差数列公式直接计算出高度。
+
+对于从第一行开始的情况，球的个数依次为 $1, 3, 5, \cdots, 2k-1$，其中 $2k-1$ 是最后一行，那么总计个数为：
+
+$$
+1 + 3 + 5 + \cdots + (2k-1) = \frac{(1+(2k-1)) \times k}{2} = k^2
+$$
+
+那么 $k$ 的最大值即为 $\lfloor \sqrt{n_o} \rfloor$，其中 $n_o$ 是提供给奇数行的球的数量，$\lfloor \cdot \rfloor$ 表示向下取整。
+
+同理，对于从第二行开始的情况，有：
+
+$$
+2+4+6+\cdots+2k = \frac{(2+2k) \times k}{2} = k^2 + k
+$$
+
+解方程可得 $k$ 的最大值为 $\lfloor \dfrac{-1+\sqrt{1+4n_e}}{2} \rfloor$，其中 $n_e$ 是提供给偶数行的球的数量。
+
+因此最后一个奇数行为 $2\lfloor \sqrt{n_o} \rfloor - 1$，最后一个偶数行为 $2\lfloor \dfrac{-1+\sqrt{1+4n_e}}{2} \rfloor$，最终的答案即为其中的较小值加 $1$。
+
+**代码**
+
+* [sol2-C++]
+
+```C++
+class Solution {
+public:
+    int maxHeightOfTriangle(int red, int blue) {
+        auto maxHeight = [](int x, int y) -> int {
+            int odd = 2 * int(sqrt(x)) - 1;
+            int even = 2 * int((-1 + sqrt(1 + 4 * y)) / 2);
+            return min(odd, even) + 1;
+        };
+        return max(maxHeight(red, blue), maxHeight(blue, red));
+    }
+};
+```
+
+* [sol2-Python3]
+
+```Python
+class Solution:
+    def maxHeightOfTriangle(self, red: int, blue: int) -> int:
+        def maxHeight(x: int, y: int) -> int:
+            odd = 2 * int(sqrt(x)) - 1
+            even = 2 * int((-1 + sqrt(1 + 4 * y)) / 2)
+            return min(odd, even) + 1
+        
+        return max(maxHeight(red, blue), maxHeight(blue, red))
+```
+
+* [sol2-Java]
+
+```Java
+class Solution {
+    public int maxHeightOfTriangle(int red, int blue) {
+        return Math.max(maxHeight(red, blue), maxHeight(blue, red));
+    }
+
+    public int maxHeight(int x, int y) {
+        int odd = 2 * (int)(Math.sqrt(x)) - 1;
+        int even = 2 * (int)((-1 + Math.sqrt(1 + 4 * y)) / 2);
+        return Math.min(odd, even) + 1;
+    }
+}
+```
+
+* [sol2-C#]
+
+```C#
+public class Solution {
+    public int MaxHeightOfTriangle(int red, int blue) {
+        return Math.Max(MaxHeight(red, blue), MaxHeight(blue, red));
+    }
+
+    public int MaxHeight(int x, int y) {
+        int odd = 2 * (int)(Math.Sqrt(x)) - 1;
+        int even = 2 * (int)((-1 + Math.Sqrt(1 + 4 * y)) / 2);
+        return Math.Min(odd, even) + 1;
+    }
+}
+```
+
+* [sol2-Go]
+
+```Go
+func maxHeightOfTriangle(red int, blue int) int {
+    return max(maxHeight(red, blue), maxHeight(blue, red))
+}
+
+func maxHeight(x, y int) int {
+	odd := 2 * int(math.Sqrt(float64(x))) - 1
+	even := 2 * int((-1 + math.Sqrt(1 + 4 * float64(y))) / 2)
+	return min(odd, even) + 1
+}
+```
+
+* [sol2-C]
+
+```C
+int maxHeight(int x, int y) {
+    int odd = 2 * (int)sqrt((double)x) - 1;
+    int even = 2 * (int)((-1 + sqrt(1 + 4.0 * (double)y)) / 2);
+    return fmin(odd, even) + 1;
+}
+
+int maxHeightOfTriangle(int red, int blue) {
+    return fmax(maxHeight(red, blue), maxHeight(blue, red));
+}
+```
+
+* [sol2-JavaScript]
+
+```JavaScript
+var maxHeightOfTriangle = function(red, blue) {
+    return Math.max(maxHeight(red, blue), maxHeight(blue, red));
+};
+
+function maxHeight(x, y) {
+    const odd =  2 * Math.floor(Math.sqrt(x)) - 1;
+    const even = 2 * Math.floor(Math.floor(-1 + Math.sqrt(1 + 4 * y)) / 2);
+    return Math.min(odd, even) + 1;
+}
+```
+
+* [sol2-TypeScript]
+
+```TypeScript
+function maxHeightOfTriangle(red: number, blue: number): number {
+    return Math.max(maxHeight(red, blue), maxHeight(blue, red));
+};
+
+function maxHeight(x: number, y: number): number {
+    const odd = 2 * Math.floor(Math.sqrt(x)) - 1;
+    const even = 2 * Math.floor((-1 + Math.sqrt(1 + 4 * y)) / 2);
+    return Math.min(odd, even) + 1;
+}
+```
+
+* [sol2-Rust]
+
+```Rust
+impl Solution {
+    pub fn max_height_of_triangle(red: i32, blue: i32) -> i32 {
+        fn maxHeight(x: i32, y: i32) -> i32 {
+            let odd = 2 * ((x as f64).sqrt() as i32) - 1;
+            let even = 2 * (((-1.0 + (1.0 + 4.0 * (y as f64)).sqrt()) / 2.0) as i32);
+            odd.min(even) + 1
+        }
+        std::cmp::max(maxHeight(red, blue), maxHeight(blue, red))
+    }
+}
+```
+
+**复杂度分析**
+
+- 时间复杂度：$O(1)$。
+
+- 空间复杂度：$O(1)$。
+
