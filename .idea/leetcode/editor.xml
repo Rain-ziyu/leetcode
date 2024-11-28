@@ -1103,6 +1103,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3165-不包含相邻元素的子序列的最大和.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3165-不包含相邻元素的子序列的最大和.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3165" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3165-不包含相邻元素的子序列的最大和.go" />
+              <option name="titleSlug" value="maximum-sum-of-subsequence-with-non-adjacent-elements" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3171-找到按位或最接近 K 的子数组.go">
           <value>
             <LeetcodeEditor>
@@ -1169,6 +1180,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3208-交替组 II.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3208-交替组 II.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3208" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3208-交替组 II.go" />
+              <option name="titleSlug" value="alternating-groups-ii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3211-生成不含相邻零的二进制字符串.go">
           <value>
             <LeetcodeEditor>
@@ -1232,17 +1254,6 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3258-统计满足 K 约束的子字符串数量 I.go" />
               <option name="titleSlug" value="count-substrings-that-satisfy-k-constraint-i" />
-            </LeetcodeEditor>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3165-不包含相邻元素的子序列的最大和.go">
-          <value>
-            <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3165-不包含相邻元素的子序列的最大和.md" />
-              <option name="frontendQuestionId" value="leetcode.cn3165" />
-              <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3165-不包含相邻元素的子序列的最大和.go" />
-              <option name="titleSlug" value="maximum-sum-of-subsequence-with-non-adjacent-elements" />
             </LeetcodeEditor>
           </value>
         </entry>
