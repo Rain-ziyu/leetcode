@@ -1235,6 +1235,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3250-单调数组对的数目 I.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3250-单调数组对的数目 I.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3250" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3250-单调数组对的数目 I.go" />
+              <option name="titleSlug" value="find-the-count-of-monotonic-pairs-i" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3255-长度为 K 的子数组的能量值 II.go">
           <value>
             <LeetcodeEditor>
@@ -1254,6 +1265,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3258-统计满足 K 约束的子字符串数量 I.go" />
               <option name="titleSlug" value="count-substrings-that-satisfy-k-constraint-i" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3274-检查棋盘方格颜色是否相同.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3274-检查棋盘方格颜色是否相同.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3274" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3274-检查棋盘方格颜色是否相同.go" />
+              <option name="titleSlug" value="check-if-two-chessboard-squares-have-the-same-color" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -1507,6 +1529,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/928-尽量减少恶意软件的传播 II.go" />
               <option name="titleSlug" value="minimize-malware-spread-ii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/935-骑士拨号器.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/935-骑士拨号器.md" />
+              <option name="frontendQuestionId" value="leetcode.cn935" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/935-骑士拨号器.go" />
+              <option name="titleSlug" value="knight-dialer" />
             </LeetcodeEditor>
           </value>
         </entry>
