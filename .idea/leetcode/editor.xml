@@ -1257,6 +1257,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3218-切蛋糕的最小总开销 I.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/3218-切蛋糕的最小总开销 I.md" />
+              <option name="frontendQuestionId" value="leetcode.cn3218" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/3218-切蛋糕的最小总开销 I.go" />
+              <option name="titleSlug" value="minimum-cost-for-cutting-cake-i" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/3243-新增道路查询后的最短距离 I.go">
           <value>
             <LeetcodeEditor>
